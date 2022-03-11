@@ -1,0 +1,43 @@
+points:
+  zones:
+    matrix:
+      columns:
+        pinky:
+          rotate: 5
+          rows:
+            top:
+              skip: true
+        ring:
+          rotate: -5
+          origin: [-12, -19]
+          stagger: 8
+        middle:
+          stagger: 3
+          spread: 20
+        index:
+          rotate: -2 
+          stagger: -4
+          spread: 22.25
+        inner:
+          spread: 20.25
+          stagger: -1
+          rotate: -2
+      rows:
+        bottom:
+        home:
+        top:
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-7, -19]
+      columns:
+        home:
+          spread: 10
+          rotate: -10
+          origin: [-11.75, -9]
+        far:
+          spread: 20
+          rotate: -4
+          origin: [-9.5, -9]
+      rows:
+        thumb:

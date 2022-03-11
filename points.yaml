@@ -1,0 +1,353 @@
+matrix_pinky_bottom:
+  x: 0
+  'y': 0
+  r: 5
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_pinky_bottom
+    colrow: pinky_bottom
+    col: &ref_0
+      rotate: 5
+      rows:
+        top:
+          skip: true
+      stagger: 0
+      spread: 0
+      origin:
+        - 0
+        - 0
+      key: {}
+      name: pinky
+    row: bottom
+matrix_pinky_home:
+  x: -1.6559591
+  'y': 18.9276993
+  r: 5
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_pinky_home
+    colrow: pinky_home
+    col: *ref_0
+    row: home
+matrix_ring_bottom:
+  x: 19.932076000000002
+  'y': 8.6519485
+  r: 0
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_ring_bottom
+    colrow: ring_bottom
+    col: &ref_1
+      rotate: -5
+      origin:
+        - -12
+        - -19
+      stagger: 8
+      spread: 19
+      rows: {}
+      key: {}
+      name: ring
+    row: bottom
+matrix_ring_home:
+  x: 19.9320761
+  'y': 27.6519486
+  r: 0
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_ring_home
+    colrow: ring_home
+    col: *ref_1
+    row: home
+matrix_ring_top:
+  x: 19.9320761
+  'y': 46.6519485
+  r: 0
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_ring_top
+    colrow: ring_top
+    col: *ref_1
+    row: top
+matrix_middle_bottom:
+  x: 39.9320761
+  'y': 11.6519485
+  r: 0
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_middle_bottom
+    colrow: middle_bottom
+    col: &ref_2
+      stagger: 3
+      spread: 20
+      rotate: 0
+      origin:
+        - 0
+        - 0
+      rows: {}
+      key: {}
+      name: middle
+    row: bottom
+matrix_middle_home:
+  x: 39.932075999999995
+  'y': 30.6519485
+  r: 0
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_middle_home
+    colrow: middle_home
+    col: *ref_2
+    row: home
+matrix_middle_top:
+  x: 39.932075999999995
+  'y': 49.6519486
+  r: 0
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_middle_top
+    colrow: middle_top
+    col: *ref_2
+    row: top
+matrix_index_bottom:
+  x: 62.1820761
+  'y': 7.6519485
+  r: -2
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_index_bottom
+    colrow: index_bottom
+    col: &ref_3
+      rotate: -2
+      stagger: -4
+      spread: 22.25
+      origin:
+        - 0
+        - 0
+      rows: {}
+      key: {}
+      name: index
+    row: bottom
+matrix_index_home:
+  x: 62.845166400000004
+  'y': 26.6403742
+  r: -2
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_index_home
+    colrow: index_home
+    col: *ref_3
+    row: home
+matrix_index_top:
+  x: 63.508256900000006
+  'y': 45.6288
+  r: -2
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_index_top
+    colrow: index_top
+    col: *ref_3
+    row: top
+matrix_inner_bottom:
+  x: 82.3848408
+  'y': 5.9458429
+  r: -4
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_inner_bottom
+    colrow: inner_bottom
+    col: &ref_4
+      spread: 20.25
+      stagger: -1
+      rotate: -2
+      origin:
+        - 0
+        - 0
+      rows: {}
+      key: {}
+      name: inner
+    row: bottom
+matrix_inner_home:
+  x: 83.7102138
+  'y': 24.8995598
+  r: -4
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_inner_home
+    colrow: inner_home
+    col: *ref_4
+    row: home
+matrix_inner_top:
+  x: 85.03558670000001
+  'y': 43.8532768
+  r: -4
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: matrix_inner_top
+    colrow: inner_top
+    col: *ref_4
+    row: top
+thumbfan_home_thumb:
+  x: 85.28124590000002
+  'y': -15.485502
+  r: -14
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: thumbfan_home_thumb
+    colrow: home_thumb
+    col:
+      spread: 10
+      rotate: -10
+      origin:
+        - -11.75
+        - -9
+      stagger: 0
+      rows: {}
+      key: {}
+      name: home
+    row: thumb
+thumbfan_far_thumb:
+  x: 105.10824380000001
+  'y': -21.134496300000002
+  r: -18
+  meta:
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    padding: 19
+    width: 1
+    height: 1
+    skip: false
+    asym: both
+    name: thumbfan_far_thumb
+    colrow: far_thumb
+    col:
+      spread: 20
+      rotate: -4
+      origin:
+        - -9.5
+        - -9
+      stagger: 0
+      rows: {}
+      key: {}
+      name: far
+    row: thumb
