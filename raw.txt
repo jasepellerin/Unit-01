@@ -86,12 +86,12 @@ points.zones:
         rotate: thumbRotate
         spread: 11.25
         stagger: -2.25
-        key.key_net: P8
+        key.key_net: P10
       far:
         rotate: thumbFarRotate
         stagger: -1
         spread: 20
-        key.key_net: P9
+        key.key_net: P16
     rows:
       thumb:
 
@@ -119,6 +119,8 @@ outlines.exports:
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: thumbfan_far_thumb
           shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
+        - ref: thumbfan_far_thumb
+          shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_home_thumb
           shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_home_thumb
