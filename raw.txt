@@ -25,12 +25,22 @@ points.zones:
       tags:
         key_switch: true
       footprints:
-        - type: choc
+        choc_hotswap:
+          type: choc
+          nets:
+            from: =key_net
+            to: GND
+          params:
+              keycaps: true
+              reverse: true
+              hotswap: true
+        choc:
+          type: choc
           anchor:
             rotate: 180
           nets:
-            from: GND
-            to: =key_net
+            from: =key_net
+            to: GND
           params:
             reverse: true
             keycaps: true
@@ -124,9 +134,7 @@ outlines.exports:
         - ref: thumbfan_home_thumb
           shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_home_thumb
-          shift: [-halfKeyW - paddingX, halfKeyH + paddingY - 1]
-        - ref: matrix_ring_bottom
-          shift: [-halfKeyW + 1, -halfKeyH - paddingY]
+          shift: [-halfKeyW - paddingX, halfKeyH + paddingY -  7]
         - ref: matrix_pinky_bottom
           shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
         - ref: matrix_pinky_bottom
