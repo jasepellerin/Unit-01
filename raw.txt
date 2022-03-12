@@ -105,7 +105,7 @@ points.zones:
         mcu: true
     anchor:
       - ref: thumbfan_far_thumb
-        rotate: 90 - thumbRotate - thumbFarRotate
+        rotate: 270 - thumbRotate - thumbFarRotate
         shift: [-10, 30]
 
 outlines.exports:
