@@ -9,6 +9,11 @@ units:
   innerRotate: -2
   thumbRotate: -10
   thumbFarRotate: -4
+
+  mcuHeight: 18
+  mcuWidth: 33
+
+  # Used for demo.dxf
   visual_x: 1
   visual_y: 1
   
@@ -93,8 +98,8 @@ points.zones:
   mcu:
     key:
       name: mcu
-      height: &mcuHeight 18
-      width: &mcuWidth 33
+      height: mcuHeight
+      width: mcuWidth
       key_net: P10
       tags:
         mcu: true
@@ -107,16 +112,19 @@ outlines.exports:
   _outer:
     - type: polygon
       points:
-        - ref: matrix_inner_bottom
-          shift: [halfKeyW + paddingX, -halfKeyH - 2paddingY]
+        - ref: matrix_inner_home
+          shift: [halfKeyW + 3paddingX + mcuHeight, 2paddingY]
+        - shift: [0, -mcuWidth]
         - ref: thumbfan_far_thumb
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: thumbfan_far_thumb
           shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_home_thumb
-          shift: [-halfKeyW - 2paddingX, -halfKeyH - paddingY]
+          shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
+        - ref: thumbfan_home_thumb
+          shift: [-halfKeyW - paddingX, halfKeyH + paddingY - 1]
         - ref: matrix_pinky_bottom
-          shift: [-halfKeyW - paddingX, -halfKeyH - 13]
+          shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
         - ref: matrix_pinky_home
           shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
         - ref: matrix_pinky_home
@@ -147,7 +155,7 @@ outlines.exports:
       type: keys
       side: left
       tags: [mcu]
-      size: [*mcuWidth, *mcuHeight]
+      size: [mcuWidth, mcuHeight]
 
 pcbs:
   main:
