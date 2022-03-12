@@ -43,39 +43,39 @@ points.zones:
         rotate: pinkyRotate
         rows:
           top.skip: true
-          home.key_net: P1
-          bottom.key_net: P0
+          home.key_net: P8
+          bottom.key_net: P9
       ring:
         rotate: ringRotate
         stagger: 6.75
         spread: 20.75
         rows:
-          top.key_net: P20
-          home.key_net: P21
-          bottom.key_net: P20
+          top.key_net: P5
+          home.key_net: P6
+          bottom.key_net: P7
       middle:
         stagger: 3
         spread: 20
         rows:
-          top.key_net: P20
-          home.key_net: P21
-          bottom.key_net: P20
+          top.key_net: P2
+          home.key_net: P3
+          bottom.key_net: P4
       index:
         rotate: indexRotate
         stagger: -4
         spread: 22.25
         rows:
-          top.key_net: P20
-          home.key_net: P21
-          bottom.key_net: P20
+          top.key_net: P21
+          home.key_net: P20
+          bottom.key_net: P19
       inner:
         spread: 20.25
         stagger: -1
         rotate: innerRotate
         rows:
-          top.key_net: P20
-          home.key_net: P21
-          bottom.key_net: P20
+          top.key_net: P18
+          home.key_net: P15
+          bottom.key_net: P14
   thumbfan:
     key: *key_attributes
     anchor:
@@ -100,7 +100,7 @@ points.zones:
       name: mcu
       height: mcuHeight
       width: mcuWidth
-      key_net: P10
+      key_net:
       tags:
         mcu: true
     anchor:
@@ -125,6 +125,10 @@ outlines.exports:
           shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_home_thumb
           shift: [-halfKeyW - paddingX, halfKeyH + paddingY - 1]
+        - ref: matrix_ring_bottom
+          shift: [-halfKeyW + 1, -halfKeyH - paddingY]
+        - ref: matrix_pinky_bottom
+          shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
         - ref: matrix_pinky_bottom
           shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
         - ref: matrix_pinky_home
