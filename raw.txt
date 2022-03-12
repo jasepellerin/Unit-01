@@ -11,52 +11,61 @@ units:
   thumbFarRotate: -4
 points:
   key:
-   padding: cy
-   footprints:
-     choc_hotswap:
-      type: choc
-      nets:
-       from: =column_net
-       to: GND
-      params:
-        keycaps: true
-        reverse: true
-        hotswap: true
-     choc:
-      type: choc
-      anchor:
-       rotate: 180
-      nets:
-       from: =column_net
-       to: GND
-      params:
-        keycaps: true
-        reverse: true
+    padding: cy
+    footprints:
+      - type: choc
+        anchor:
+          rotate: 180
+        nets:
+          from: GND
+          to: =key_net
+        params:
+          reverse: true
+          keycaps: true
   zones:
     matrix:
       rows:
-        bottom.padding: cy
-        home.padding: cy
-        top.padding: cy
+        bottom:
+        home:
+        top:
       columns:
         pinky:
           rotate: pinkyRotate
-          rows.top.skip: true
+          rows:
+            top.skip: true
+            home.key_net: P21
+            bottom.key_net: P20
         ring:
           rotate: ringRotate
           stagger: 6.75
           spread: 20.75
+          rows:
+            top.key_net: P20
+            home.key_net: P21
+            bottom.key_net: P20
         middle:
           stagger: 3
           spread: 20
+          rows:
+            top.key_net: P20
+            home.key_net: P21
+            bottom.key_net: P20
         index:
           rotate: indexRotate
           stagger: -4
           spread: 22.25
+          rows:
+            top.key_net: P20
+            home.key_net: P21
+            bottom.key_net: P20
         inner:
           spread: 20.25
           stagger: -1
           rotate: innerRotate
+          rows:
+            top.key_net: P20
+            home.key_net: P21
+            bottom.key_net: P20
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -66,24 +75,27 @@ points:
           rotate: thumbRotate
           spread: 11.25
           stagger: -2.25
+          key.key_net: P6
         far:
           spread: 20
+          key.key_net: P6
       rows:
         thumb:
 
-mcu:
-  key:
-    name: mcu
-    height: 18
-    width: 33
-  anchor:
-    - ref: outline_bottom_left
-      shift: [18, 0]
-    - ref: thumbfan_home
+    mcu:
+      key:
+        name: mcu
+        height: 18
+        width: 33
+        key_net: P10
+      anchor:
+        - ref: matrix_pinky_bottom
+          shift: [18, 0]
+        - ref: thumbfan_home_thumb
 
 outlines:
   exports:
-    _backing:
+    _panel:
       - type: polygon
         points:
           - ref: matrix_inner_bottom
@@ -117,8 +129,18 @@ outlines:
           - ref: matrix_inner_top
             shift: [halfKeyW + paddingX, halfKeyH + paddingY]
     base_outline:
-      - _backing
+      - _panel
       - operation: stack
         type: keys
         side: left
         size: [cx - .5, cy - .5]
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: _panel
+    footprints:
+      - type: promicro
+        anchor.ref: mcu
+        params:
+          orientation: up
