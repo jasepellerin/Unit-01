@@ -1,8 +1,8 @@
 units:
   halfKeyW: 0.5 cx
   halfKeyH: 0.5 cy
-  paddingX: 1
-  paddingY: 1
+  paddingX: 2
+  paddingY: 2
   pinkyRotate: 5
   ringRotate: -5
   indexRotate: -2
@@ -38,8 +38,8 @@ points.zones:
         rotate: pinkyRotate
         rows:
           top.skip: true
-          home.key_net: P21
-          bottom.key_net: P20
+          home.key_net: P1
+          bottom.key_net: P0
       ring:
         rotate: ringRotate
         stagger: 6.75
@@ -81,32 +81,34 @@ points.zones:
         rotate: thumbRotate
         spread: 11.25
         stagger: -2.25
-        key.key_net: P6
+        key.key_net: P8
       far:
         rotate: thumbFarRotate
         stagger: -1
         spread: 20
-        key.key_net: P6
+        key.key_net: P9
     rows:
       thumb:
 
   mcu:
     key:
       name: mcu
-      height: 18
-      width: 33
+      height: &mcuHeight 18
+      width: &mcuWidth 33
       key_net: P10
+      tags:
+        mcu: true
     anchor:
-      - ref: matrix_pinky_bottom
-        rotate: -pinkyRotate
-        shift: [35, -15]
+      - ref: thumbfan_far_thumb
+        rotate: 90 - thumbRotate - thumbFarRotate
+        shift: [-10, 30]
 
 outlines.exports:
-  _panel:
+  _outer:
     - type: polygon
       points:
         - ref: matrix_inner_bottom
-          shift: [halfKeyW + paddingX, -halfKeyH - 4paddingY]
+          shift: [halfKeyW + paddingX, -halfKeyH - 2paddingY]
         - ref: thumbfan_far_thumb
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: thumbfan_far_thumb
@@ -118,23 +120,22 @@ outlines.exports:
         - ref: matrix_pinky_home
           shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
         - ref: matrix_pinky_home
-          shift: [halfKeyW + 3.5 paddingX, halfKeyH + paddingY]
+          shift: [halfKeyW + paddingX + .75, halfKeyH + paddingY]
         - ref: matrix_ring_top
           shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
-        - ref: matrix_ring_top
-          shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: matrix_middle_top
           shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
         - ref: matrix_middle_top
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: matrix_index_top
-          shift: [-halfKeyW - 4.75 paddingX, halfKeyH + paddingY]
+          shift: [-halfKeyW - paddingX - 2, halfKeyH + paddingY]
         - ref: matrix_index_top
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: matrix_inner_top
-          shift: [-halfKeyW - 2.75 paddingX, halfKeyH + paddingY]
-        - ref: matrix_inner_top
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
+  _panel:
+    - name: _outer
+      fillet: 3
   panelWithKeys:
     - _panel
     - operation: stack
@@ -142,6 +143,12 @@ outlines.exports:
       side: left
       tags: [key_switch]
       size: [*key_width, *key_height]
+    - operation: stack
+      type: keys
+      side: left
+      tags: [mcu]
+      size: [*mcuWidth, *mcuHeight]
+
 pcbs:
   main:
     outlines:
