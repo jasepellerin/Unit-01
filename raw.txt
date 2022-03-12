@@ -3,10 +3,12 @@ units:
   ky: cy
   px: 2
   py: 2
-  pinky_rotate: 5
-  ring_rotate: -5
-  index_rotate: -2
-  inner_rotate: -2
+  pinkyRotate: 5
+  ringRotate: -5
+  indexRotate: -2
+  innerRotate: -2
+  thumbRotate: -10
+  thumbFarRotate: -4
 points:
   key:
    padding: cy
@@ -38,25 +40,25 @@ points:
         top:
       columns:
         pinky:
-          rotate: pinky_rotate
+          rotate: pinkyRotate
           rows:
             top:
               skip: true
         ring:
-          rotate: ring_rotate
+          rotate: ringRotate
           origin: [-12, -19]
           stagger: 8
         middle:
           stagger: 3
           spread: 20
         index:
-          rotate: index_rotate
+          rotate: indexRotate
           stagger: -4
           spread: 22.25
         inner:
           spread: 20.25
           stagger: -1
-          rotate: inner_rotate
+          rotate: innerRotate
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -64,23 +66,25 @@ points:
       columns:
         home:
           spread: 10
-          rotate: -10
+          rotate: thumbRotate
           origin: [-11.75, -9]
         far:
           spread: 20
-          rotate: -4
+          rotate: thumbFarRotate
           origin: [-9.5, -9]
       rows:
         thumb:
 outlines:
   exports:
     raw:
-      - type: keys
+      main:
+        type: keys
         side: left
         size: [kx + px, ky + py]
         corner: px
     thumbfan_glue:
-      - type: polygon
+      main:
+        type: polygon
         points:
           - ref: matrix_inner_bottom
             shift: [0.5 kx + 0.5px, -0.5 ky + 0.5 py]
@@ -89,29 +93,13 @@ outlines:
           - ref: thumbfan_far_thumb
             shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_bottom
-            shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
+            shift: [-0.5 kx, -0.5 ky -0.4 px]
           - ref: matrix_pinky_home
+            shift: [-0.5 kx, 0]
           - ref: matrix_inner_home
-    patch_outer:
-      - type: polygon
-        points:
-          - ref: matrix_ring_top
-          - ref: matrix_ring_bottom
-          - ref: matrix_pinky_bottom
-            shift: [-0.5 (kx + px), 0]
-          - ref: matrix_pinky_home
-            shift: [-0.5 (kx + px), 0]
-    patch_inner:
-      - type: polygon
-        points:
-          - ref: matrix_inner_top
-            shift: [0.5 (kx + px), 0]
-          - ref: matrix_inner_bottom
-            shift: [0.5 (kx + px), 0]
-          - ref: matrix_index_bottom
-          - ref: matrix_index_top
     key_cap_outlines:
-      - type: keys
+      main:
+        type: keys
         side: left
         size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
         bound: false
@@ -138,21 +126,22 @@ outlines:
         size: [kx, ky]
         bound: false
         corner: 1
+    backing:
+      main:
+        type: polygon
+        points:
+          - ref: matrix_inner_bottom
     keywell:
       main:
         type: outline
         name: raw
-      patch_inner:
-        type: outline
-        name: patch_inner
-        operation: add
-      patch_outer:
-        type: outline
-        name: patch_outer
-        operation: add
       thumbfan_glue:
         type: outline
         name: thumbfan_glue
+        operation: add
+      backing:
+        type: outline
+        name: backing
         operation: add
     base_outline:
       main:
