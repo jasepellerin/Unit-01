@@ -1,6 +1,6 @@
 units:
-  halfKeyWidth: 0.5 cx
-  halfKeyHeight: 0.5 cy
+  halfKeyW: 0.5 cx
+  halfKeyH: 0.5 cy
   paddingX: 1
   paddingY: 1
   pinkyRotate: 5
@@ -35,15 +35,13 @@ points:
   zones:
     matrix:
       rows:
-        bottom:
-        home:
-        top:
+        bottom.padding: cy
+        home.padding: cy
+        top.padding: cy
       columns:
         pinky:
           rotate: pinkyRotate
-          rows:
-            top:
-              skip: true
+          rows.top.skip: true
         ring:
           rotate: ringRotate
           stagger: 6.75
@@ -69,96 +67,58 @@ points:
           spread: 11.25
           stagger: -2.25
         far:
-          rotate: thumbFarRotate
-          spread: 20.5
-          stagger: -.5
+          spread: 20
       rows:
         thumb:
+
+mcu:
+  key:
+    name: mcu
+    height: 18
+    width: 33
+  anchor:
+    - ref: outline_bottom_left
+      shift: [18, 0]
+    - ref: thumbfan_home
+
 outlines:
   exports:
-    raw:
-      main:
-        type: keys
-        side: left
-        size: [cx + paddingX, cy + paddingY]
-        corner: 2 * paddingX
-    thumbfan_glue:
-      main:
-        type: polygon
+    _backing:
+      - type: polygon
         points:
           - ref: matrix_inner_bottom
-            shift: [halfKeyWidth + paddingX, -halfKeyHeight + paddingY]
+            shift: [halfKeyW + paddingX, -halfKeyH - 4paddingY]
           - ref: thumbfan_far_thumb
-            shift: [halfKeyWidth - paddingX, halfKeyHeight + paddingY]
+            shift: [halfKeyW + paddingX, halfKeyH + paddingY]
           - ref: thumbfan_far_thumb
-            shift: [halfKeyWidth - paddingX, -halfKeyHeight - paddingY]
+            shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
+          - ref: thumbfan_home_thumb
+            shift: [-halfKeyW - 2paddingX, -halfKeyH - paddingY]
           - ref: matrix_pinky_bottom
-            shift: [-halfKeyWidth, -halfKeyHeight -0.4 paddingX]
+            shift: [-halfKeyW - paddingX, -halfKeyH - 13]
           - ref: matrix_pinky_home
-            shift: [-halfKeyWidth, 0]
-          - ref: matrix_inner_home
-    key_cap_outlines:
-      main:
-        type: keys
-        side: left
-        size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
-        bound: false
-    controller_area:
-      main:
-        type: rectangle
-        anchor:
-          ref:
-            - thumbfan_far_thumb
-          shift: [-1 cx, 0]
-          rotate: 10
-        size: [32, 76.5]
-        corner: 2 * paddingX
-    switches:
-      main:
-        type: keys
-        side: left
-        size: 14
-        bound: false
-    keycaps:
-      main:
-        type: keys
-        side: left
-        size: [cx, cy]
-        bound: false
-        corner: paddingX
-    backing:
-      main:
-        type: polygon
-        points:
-          - ref: matrix_inner_bottom
-            shift: [halfKeyWidth + paddingX, -halfKeyHeight - paddingX]
-          - ref: matrix_pinky_bottom
-            shift: [-halfKeyWidth - paddingX, -halfKeyHeight - paddingX]
+            shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
           - ref: matrix_pinky_home
-            shift: [-halfKeyWidth - paddingX, halfKeyHeight + paddingX]
+            shift: [halfKeyW + 3.5 paddingX, halfKeyH + paddingY]
+          - ref: matrix_ring_top
+            shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
+          - ref: matrix_ring_top
+            shift: [halfKeyW + paddingX, halfKeyH + paddingY]
           - ref: matrix_middle_top
-            shift: [-halfKeyWidth - paddingX, halfKeyHeight + paddingX]
+            shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
           - ref: matrix_middle_top
-            shift: [halfKeyWidth + paddingX, halfKeyHeight + paddingX]
+            shift: [halfKeyW + paddingX, halfKeyH + paddingY]
+          - ref: matrix_index_top
+            shift: [-halfKeyW - 4.75 paddingX, halfKeyH + paddingY]
+          - ref: matrix_index_top
+            shift: [halfKeyW + paddingX, halfKeyH + paddingY]
           - ref: matrix_inner_top
-            shift: [halfKeyWidth + paddingX, halfKeyHeight + paddingX]
-    keywell:
-      main:
-        type: outline
-        name: raw
-      thumbfan_glue:
-        type: outline
-        name: thumbfan_glue
-        operation: add
-      backing:
-        type: outline
-        name: backing
-        operation: add
+            shift: [-halfKeyW - 2.75 paddingX, halfKeyH + paddingY]
+          - ref: matrix_inner_top
+            shift: [halfKeyW + paddingX, halfKeyH + paddingY]
     base_outline:
-      main:
-        type: outline
-        name: keywell
-      controller:
-        type: outline
-        name: controller_area
-        operation: add
+      - _backing
+      - operation: stack
+        type: keys
+        side: left
+        size: [cx - .5, cy - .5]
