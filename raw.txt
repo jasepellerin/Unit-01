@@ -1,3 +1,12 @@
+units:
+  kx: cx
+  ky: cy
+  px: 2
+  py: 2
+  pinky_rotate: 5
+  ring_rotate: -5
+  index_rotate: -2
+  inner_rotate: -2
 points:
   key:
    padding: cy
@@ -22,35 +31,35 @@ points:
         keycaps: true
         reverse: true
   zones:
-    board:
+    matrix:
       rows:
         bottom:
         home:
         top:
       columns:
         pinky:
-          rotate: 5
+          rotate: pinky_rotate
           rows:
             top:
               skip: true
         ring:
-          rotate: -5
+          rotate: ring_rotate
           origin: [-12, -19]
           stagger: 8
         middle:
           stagger: 3
           spread: 20
         index:
-          rotate: -2 
+          rotate: index_rotate
           stagger: -4
           spread: 22.25
         inner:
           spread: 20.25
           stagger: -1
-          rotate: -2
-    thumb_cluster:
+          rotate: inner_rotate
+    thumbfan:
       anchor:
-        ref: board_inner_bottom
+        ref: matrix_inner_bottom
         shift: [-7, -19]
       columns:
         home:
@@ -63,3 +72,93 @@ points:
           origin: [-9.5, -9]
       rows:
         thumb:
+outlines:
+  exports:
+    raw:
+      - type: keys
+        side: left
+        size: [kx + px, ky + py]
+        corner: px
+    thumbfan_glue:
+      - type: polygon
+        points:
+          - ref: matrix_inner_bottom
+            shift: [0.5 kx + 0.5px, -0.5 ky + 0.5 py]
+          - ref: thumbfan_far_thumb
+            shift: [0.5 kx - 0.5px, 0.5 ky + 0.5 py]
+          - ref: thumbfan_far_thumb
+            shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
+          - ref: matrix_pinky_bottom
+            shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
+          - ref: matrix_pinky_home
+          - ref: matrix_inner_home
+    patch_outer:
+      - type: polygon
+        points:
+          - ref: matrix_ring_top
+          - ref: matrix_ring_bottom
+          - ref: matrix_pinky_bottom
+            shift: [-0.5 (kx + px), 0]
+          - ref: matrix_pinky_home
+            shift: [-0.5 (kx + px), 0]
+    patch_inner:
+      - type: polygon
+        points:
+          - ref: matrix_inner_top
+            shift: [0.5 (kx + px), 0]
+          - ref: matrix_inner_bottom
+            shift: [0.5 (kx + px), 0]
+          - ref: matrix_index_bottom
+          - ref: matrix_index_top
+    key_cap_outlines:
+      - type: keys
+        side: left
+        size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
+        bound: false
+    controller_area:
+      main:
+        type: rectangle
+        anchor:
+          ref:
+            - thumbfan_far_thumb
+          shift: [-1 kx, 0]
+          rotate: 10
+        size: [32, 76.5]
+        corner: px
+    switches:
+      main:
+        type: keys
+        side: left
+        size: 14
+        bound: false
+    keycaps:
+      main:
+        type: keys
+        side: left
+        size: [kx, ky]
+        bound: false
+        corner: 1
+    keywell:
+      main:
+        type: outline
+        name: raw
+      patch_inner:
+        type: outline
+        name: patch_inner
+        operation: add
+      patch_outer:
+        type: outline
+        name: patch_outer
+        operation: add
+      thumbfan_glue:
+        type: outline
+        name: thumbfan_glue
+        operation: add
+    base_outline:
+      main:
+        type: outline
+        name: keywell
+      controller:
+        type: outline
+        name: controller_area
+        operation: add
