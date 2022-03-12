@@ -1,8 +1,8 @@
 units:
-  kx: cx
-  ky: cy
-  px: 2
-  py: 2
+  halfKeyWidth: 0.5 cx
+  halfKeyHeight: 0.5 cy
+  paddingX: 1
+  paddingY: 1
   pinkyRotate: 5
   ringRotate: -5
   indexRotate: -2
@@ -46,8 +46,8 @@ points:
               skip: true
         ring:
           rotate: ringRotate
-          origin: [-12, -19]
-          stagger: 8
+          stagger: 6.75
+          spread: 20.75
         middle:
           stagger: 3
           spread: 20
@@ -65,13 +65,13 @@ points:
         shift: [-7, -19]
       columns:
         home:
-          spread: 10
           rotate: thumbRotate
-          origin: [-11.75, -9]
+          spread: 11.25
+          stagger: -2.25
         far:
-          spread: 20
           rotate: thumbFarRotate
-          origin: [-9.5, -9]
+          spread: 20.5
+          stagger: -.5
       rows:
         thumb:
 outlines:
@@ -80,22 +80,22 @@ outlines:
       main:
         type: keys
         side: left
-        size: [kx + px, ky + py]
-        corner: px
+        size: [cx + paddingX, cy + paddingY]
+        corner: 2 * paddingX
     thumbfan_glue:
       main:
         type: polygon
         points:
           - ref: matrix_inner_bottom
-            shift: [0.5 kx + 0.5px, -0.5 ky + 0.5 py]
+            shift: [halfKeyWidth + paddingX, -halfKeyHeight + paddingY]
           - ref: thumbfan_far_thumb
-            shift: [0.5 kx - 0.5px, 0.5 ky + 0.5 py]
+            shift: [halfKeyWidth - paddingX, halfKeyHeight + paddingY]
           - ref: thumbfan_far_thumb
-            shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
+            shift: [halfKeyWidth - paddingX, -halfKeyHeight - paddingY]
           - ref: matrix_pinky_bottom
-            shift: [-0.5 kx, -0.5 ky -0.4 px]
+            shift: [-halfKeyWidth, -halfKeyHeight -0.4 paddingX]
           - ref: matrix_pinky_home
-            shift: [-0.5 kx, 0]
+            shift: [-halfKeyWidth, 0]
           - ref: matrix_inner_home
     key_cap_outlines:
       main:
@@ -109,10 +109,10 @@ outlines:
         anchor:
           ref:
             - thumbfan_far_thumb
-          shift: [-1 kx, 0]
+          shift: [-1 cx, 0]
           rotate: 10
         size: [32, 76.5]
-        corner: px
+        corner: 2 * paddingX
     switches:
       main:
         type: keys
@@ -123,14 +123,25 @@ outlines:
       main:
         type: keys
         side: left
-        size: [kx, ky]
+        size: [cx, cy]
         bound: false
-        corner: 1
+        corner: paddingX
     backing:
       main:
         type: polygon
         points:
           - ref: matrix_inner_bottom
+            shift: [halfKeyWidth + paddingX, -halfKeyHeight - paddingX]
+          - ref: matrix_pinky_bottom
+            shift: [-halfKeyWidth - paddingX, -halfKeyHeight - paddingX]
+          - ref: matrix_pinky_home
+            shift: [-halfKeyWidth - paddingX, halfKeyHeight + paddingX]
+          - ref: matrix_middle_top
+            shift: [-halfKeyWidth - paddingX, halfKeyHeight + paddingX]
+          - ref: matrix_middle_top
+            shift: [halfKeyWidth + paddingX, halfKeyHeight + paddingX]
+          - ref: matrix_inner_top
+            shift: [halfKeyWidth + paddingX, halfKeyHeight + paddingX]
     keywell:
       main:
         type: outline
