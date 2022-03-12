@@ -48,7 +48,7 @@ points:
           spread: 20.25
           stagger: -1
           rotate: -2
-    thumbfan:
+    thumb_cluster:
       anchor:
         ref: board_inner_bottom
         shift: [-7, -19]
