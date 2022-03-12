@@ -1,6 +1,32 @@
 points:
+  key:
+   padding: cy
+   footprints:
+     choc_hotswap:
+      type: choc
+      nets:
+       from: =column_net
+       to: GND
+      params:
+        keycaps: true
+        reverse: true
+        hotswap: true
+     choc:
+      type: choc
+      anchor:
+       rotate: 180
+      nets:
+       from: =column_net
+       to: GND
+      params:
+        keycaps: true
+        reverse: true
   zones:
-    matrix:
+    board:
+      rows:
+        bottom:
+        home:
+        top:
       columns:
         pinky:
           rotate: 5
@@ -22,13 +48,9 @@ points:
           spread: 20.25
           stagger: -1
           rotate: -2
-      rows:
-        bottom:
-        home:
-        top:
     thumbfan:
       anchor:
-        ref: matrix_inner_bottom
+        ref: board_inner_bottom
         shift: [-7, -19]
       columns:
         home:
