@@ -118,3 +118,4 @@ dist
 # Project specific
 output
 temp*
+config.yaml
