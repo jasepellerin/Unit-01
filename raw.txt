@@ -73,7 +73,7 @@ points.zones:
       index:
         rotate: indexRotate
         stagger: -4
-        spread: 22.25
+        spread: 20
         rows:
           top.key_net: P21
           home.key_net: P20
@@ -149,8 +149,6 @@ outlines.exports:
           shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
         - ref: matrix_middle_top
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
-        - ref: matrix_index_top
-          shift: [-halfKeyW - paddingX - 2, halfKeyH + paddingY]
         - ref: matrix_index_top
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: matrix_inner_top
