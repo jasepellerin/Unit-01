@@ -7,7 +7,7 @@ units:
   ringRotate: -5
   indexRotate: -2
   innerRotate: -2
-  thumbRotate: -10
+  thumbRotate: -8
   thumbFarRotate: -4
 
   mcuHeight: 18
@@ -94,7 +94,7 @@ points.zones:
     columns:
       home:
         rotate: thumbRotate
-        spread: 11.25
+        spread: 6.25
         stagger: -2.25
         key.key_net: P10
       far:
@@ -114,19 +114,19 @@ points.zones:
       tags:
         mcu: true
     anchor:
-      - ref: thumbfan_far_thumb
-        rotate: 270 - thumbRotate - thumbFarRotate
-        shift: [-10, 30]
+      - ref: matrix_inner_home
+        rotate: 270
+        shift: [cx + paddingX, -halfKeyH - 1.25paddingY]
 
 outlines.exports:
   _outer:
     - type: polygon
       points:
         - ref: matrix_inner_home
-          shift: [halfKeyW + 3paddingX + mcuHeight, 2paddingY]
+          shift: [halfKeyW + 2paddingX + mcuHeight, 3paddingY]
         - shift: [0, -mcuWidth]
         - ref: thumbfan_far_thumb
-          shift: [halfKeyW + paddingX, halfKeyH + paddingY]
+          shift: [halfKeyW + paddingX, halfKeyH]
         - ref: thumbfan_far_thumb
           shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_far_thumb
