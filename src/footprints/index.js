@@ -1,6 +1,5 @@
 module.exports = {
   alps: require("./alps"),
-  battery: require("./battery"),
   button: require("./button"),
   choc: require("./choc"),
   chocmini: require("./chocmini"),
