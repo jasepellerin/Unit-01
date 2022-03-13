@@ -16,7 +16,7 @@ units:
   # Used for demo.dxf
   visual_x: 1
   visual_y: 1
-  
+
 points.zones:
   matrix:
     key: &key_attributes
@@ -31,9 +31,9 @@ points.zones:
             from: =key_net
             to: GND
           params:
-              keycaps: true
-              reverse: true
-              hotswap: true
+            keycaps: true
+            reverse: true
+            hotswap: true
         choc:
           type: choc
           anchor:
@@ -175,7 +175,38 @@ pcbs:
       main:
         outline: _panel
     footprints:
-      - type: promicro
+      promicro:
+        type: promicro
         anchor.ref: mcu
         params:
           orientation: up
+      pcm12:
+        type: pcm12
+        anchor:
+          ref: board_far_home
+          shift: [-75, -22]
+          rotate: 0
+        nets:
+          from: pos
+          to: RAW
+        params:
+          reverse: true
+      b3u1000p:
+        type: b3u1000p
+        nets:
+          r1: RST
+          r2: GND
+        anchor:
+          ref: board_pinkie_bottom
+          shift: [7, -15]
+          rotate: 0
+        params:
+          reverse: true
+      bat:
+        type: bat
+        nets:
+          neg: GND
+        anchor:
+          ref: board_far_bottom
+          shift: [-42, -0]
+          rotate: 0
