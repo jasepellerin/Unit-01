@@ -1,5 +1,6 @@
 module.exports = {
   alps: require("./alps"),
+  batteryPad: require("./batteryPad"),
   button: require("./button"),
   choc: require("./choc"),
   chocmini: require("./chocmini"),
@@ -16,7 +17,6 @@ module.exports = {
   rotary: require("./rotary"),
   scrollwheel: require("./scrollwheel"),
   slider: require("./slider"),
-  switch: require("./switch"),
   trrs: require("./trrs"),
   via: require("./via"),
 };
