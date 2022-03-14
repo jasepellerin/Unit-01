@@ -222,19 +222,29 @@ pcbs:
         params:
           orientation: up
       # Not compatible with web GUI
-      switch:
-        type: switch
-        anchor.ref: switch
-        nets:
-          from: pos
-          to: RAW
-        params:
-          reverse: true
+      # switch:
+      #   type: switch
+      #   anchor.ref: switch
+      #   nets:
+      #     from: pos
+      #     to: RAW
+      #   params:
+      #     reverse: true
       button:
-        type: button
+        type: resetButton
         anchor.ref: button
         nets:
           from: RST
           to: GND
         params:
           reverse: true
+      # buttonConnector:
+      #   type: jstph
+      #   anchor:
+      #     ref: mcu
+      #     shift: [0, 0]
+      #   params:
+      #     reverse: true
+      #   nets:
+      #     pos: RAW
+      #     neg: GND
