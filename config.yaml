@@ -81,17 +81,17 @@ points.zones:
         stagger: -4
         spread: 20
         rows:
-          top.key_net: P21
-          home.key_net: P20
-          bottom.key_net: P19
+          top.key_net: P18
+          home.key_net: P19
+          bottom.key_net: P20
       inner:
         spread: 20.25
         stagger: -1
         rotate: innerRotate
         rows:
-          top.key_net: P18
-          home.key_net: P15
-          bottom.key_net: P14
+          top.key_net: P21
+          home.key_net: P1
+          bottom.key_net: P0
   thumbfan:
     key: *key_attributes
     anchor:
@@ -224,19 +224,19 @@ pcbs:
 
       # Not compatible with web GUI
       switch:
-        type: switch
+        type: slider
         anchor.ref: switch
         nets:
-          from: pos
-          to: RAW
+          from: RAW
+          to: pos
         params:
           reverse: true
       button:
         type: resetButton
         anchor.ref: button
         nets:
-          r1: GND
-          r2: RST
+          r1: RST
+          r2: GND
         params:
           variant: 2_pin_th
       batteryPad:
