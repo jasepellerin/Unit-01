@@ -10,8 +10,14 @@ units:
   thumbRotate: -8
   thumbFarRotate: -4
 
+  buttonWidth: 3
+  buttonHeight: 2.5
+
   mcuHeight: 18
   mcuWidth: 33
+
+  switchWidth: 6.7
+  switchHeight: 2.6
 
   # Used for demo.dxf
   visual_x: 1
@@ -111,12 +117,37 @@ points.zones:
       height: mcuHeight
       width: mcuWidth
       key_net:
+      rotate: 270
       tags:
         mcu: true
     anchor:
       - ref: matrix_inner_home
-        rotate: 270
         shift: [cx + paddingX, -halfKeyH - 1.25paddingY]
+
+  button:
+    key:
+      name: button
+      height: buttonHeight
+      width: buttonWidth
+      key_net:
+      rotate: 90
+      tags:
+        button: true
+    anchor:
+      - ref: mcu
+        shift: [cy + paddingY, halfKeyW - .75paddingX]
+
+  switch:
+    key:
+      name: switch
+      height: switchHeight
+      width: switchWidth
+      key_net:
+      tags:
+        switch: true
+    anchor:
+      - ref: button
+        shift: [-.5 buttonWidth - paddingX - .5 switchWidth, 0]
 
 outlines.exports:
   _outer:
@@ -168,6 +199,16 @@ outlines.exports:
       side: left
       tags: [mcu]
       size: [mcuWidth, mcuHeight]
+    - operation: stack
+      type: keys
+      side: left
+      tags: [switch]
+      size: [switchWidth, switchHeight]
+    - operation: stack
+      type: keys
+      side: left
+      tags: [button]
+      size: [buttonWidth, buttonHeight]
 
 pcbs:
   main:
@@ -180,33 +221,3 @@ pcbs:
         anchor.ref: mcu
         params:
           orientation: up
-      pcm12:
-        type: pcm12
-        anchor:
-          ref: board_far_home
-          shift: [-75, -22]
-          rotate: 0
-        nets:
-          from: pos
-          to: RAW
-        params:
-          reverse: true
-      b3u1000p:
-        type: b3u1000p
-        nets:
-          r1: RST
-          r2: GND
-        anchor:
-          ref: board_pinkie_bottom
-          shift: [7, -15]
-          rotate: 0
-        params:
-          reverse: true
-      bat:
-        type: bat
-        nets:
-          neg: GND
-        anchor:
-          ref: board_far_bottom
-          shift: [-42, -0]
-          rotate: 0
