@@ -221,3 +221,20 @@ pcbs:
         anchor.ref: mcu
         params:
           orientation: up
+      # Not compatible with web GUI
+      switch:
+        type: switch
+        anchor.ref: switch
+        nets:
+          from: pos
+          to: RAW
+        params:
+          reverse: true
+      button:
+        type: button
+        anchor.ref: button
+        nets:
+          r1: RST
+          r2: GND
+        params:
+          reverse: true
