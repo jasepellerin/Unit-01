@@ -234,7 +234,7 @@ pcbs:
         type: button
         anchor.ref: button
         nets:
-          r1: RST
-          r2: GND
+          from: RST
+          to: GND
         params:
           reverse: true
