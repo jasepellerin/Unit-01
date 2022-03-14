@@ -147,7 +147,7 @@ points.zones:
         switch: true
     anchor:
       - ref: button
-        shift: [-.5 buttonWidth - paddingX - .5 switchWidth, 0]
+        shift: [-buttonWidth - paddingX - .5 switchWidth, 0]
 
 outlines.exports:
   _outer:
@@ -221,30 +221,30 @@ pcbs:
         anchor.ref: mcu
         params:
           orientation: up
+
       # Not compatible with web GUI
-      # switch:
-      #   type: switch
-      #   anchor.ref: switch
-      #   nets:
-      #     from: pos
-      #     to: RAW
-      #   params:
-      #     reverse: true
+      switch:
+        type: switch
+        anchor.ref: switch
+        nets:
+          from: pos
+          to: RAW
+        params:
+          reverse: true
       button:
         type: resetButton
         anchor.ref: button
         nets:
-          from: RST
-          to: GND
+          r1: GND
+          r2: RST
         params:
-          reverse: true
-      # buttonConnector:
-      #   type: jstph
-      #   anchor:
-      #     ref: mcu
-      #     shift: [0, 0]
-      #   params:
-      #     reverse: true
-      #   nets:
-      #     pos: RAW
-      #     neg: GND
+          variant: 2_pin_th
+      batteryPad:
+        type: batteryPad
+        nets:
+          neg: GND
+          pos: pos
+        anchor:
+          ref: mcu
+          shift: [-mcuWidth / 2, -0]
+          rotate: 0
