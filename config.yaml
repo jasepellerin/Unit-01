@@ -209,6 +209,11 @@ outlines.exports:
       tags: [button]
       size: [buttonWidth, buttonHeight]
 
+cases:
+  case:
+    - name: _panel
+      extrude: 6
+
 pcbs:
   main:
     outlines:
