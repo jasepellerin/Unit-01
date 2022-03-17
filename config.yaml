@@ -154,10 +154,9 @@ outlines.exports:
     - type: polygon
       points:
         - ref: matrix_inner_home
-          shift: [halfKeyW + 2paddingX + mcuHeight, 3paddingY]
-        - shift: [0, -mcuWidth]
+          shift: [halfKeyW + 2.75paddingX + mcuHeight, 3paddingY]
         - ref: thumbfan_far_thumb
-          shift: [halfKeyW + paddingX, halfKeyH]
+          shift: [halfKeyW + 1paddingX, halfKeyH + .5paddingY]
         - ref: thumbfan_far_thumb
           shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
         - ref: thumbfan_far_thumb
@@ -183,7 +182,7 @@ outlines.exports:
         - ref: matrix_index_top
           shift: [halfKeyW + paddingX, halfKeyH + paddingY]
         - ref: matrix_inner_top
-          shift: [halfKeyW + paddingX, halfKeyH + paddingY]
+          shift: [halfKeyW + 1.9paddingX, halfKeyH + 1.25paddingY]
   _panel:
     - name: _outer
       fillet: 3
@@ -221,8 +220,6 @@ pcbs:
         anchor.ref: mcu
         params:
           orientation: up
-
-      # Not compatible with web GUI
       switch:
         type: slider
         anchor.ref: switch
@@ -231,6 +228,8 @@ pcbs:
           to: pos
         params:
           reverse: true
+
+      # Not compatible with web GUI
       button:
         type: resetButton
         anchor.ref: button
