@@ -20,7 +20,7 @@ endif
 
 if SHIELD_UNIT01_LEFT || SHIELD_UNIT01_RIGHT
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+config ZMK_SPLIT
+    default y
 
 endif
