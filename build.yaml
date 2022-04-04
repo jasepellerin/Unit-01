@@ -1,6 +1,8 @@
 # This file generates the GitHub Actions matrix
 ---
 board:
-  - nice_nano_v2
+  - nice_nano
 shield:
-  - a_dux_left
+  - unit01_left
+  - unit01_right
+  - settings_reset
