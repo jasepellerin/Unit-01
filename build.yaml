@@ -13,4 +13,11 @@
 #
 ---
 include:
-  - board: nice60
+  - board: nice_nano_v2
+    shield: unit01
+  # - board: nice_nano_v2
+  #   shield: unit_01_left
+  # - board: nice_nano_v2
+  #   shield: unit_01_right
+  # - board: nice_nano_v2
+  #   shield: unit_01_dongle
