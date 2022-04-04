@@ -14,7 +14,7 @@ endif
 if SHIELD_UNIT01_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Unit 01 - Auxiliary"
+	default "Unit 01 Aux"
     
 endif
 
