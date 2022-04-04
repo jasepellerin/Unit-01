@@ -3,6 +3,4 @@
 board:
   - nice_nano_v2
 shield:
-  - unit01_left
-  - unit01_right
-  - settings_reset
+  - a_dux_left
