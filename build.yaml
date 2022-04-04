@@ -5,3 +5,4 @@ board:
 shield:
   - unit01_left
   - unit01_right
+  - settings_reset
