@@ -6,16 +6,31 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        // Disable this to get the real layer
+        //bt_clr {
+        //  bindings = <
+        //    //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
+        //                       &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR        &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR        
+        //    // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
+        //         &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR        &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR
+        //    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //         &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR        &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR    &bt BT_CLR
+        //    // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+        //                                                   &bt BT_CLR    &bt BT_CLR        &bt BT_CLR    &bt BT_CLR
+        //    //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+        //  >;
+        //};
+
+        base_layer {
           bindings = <
             //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
-                               &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR             &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR        
+                               &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y        
             // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
-                 &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR        &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR
+                 &kp A         &kp R         &kp S         &kp T         &bt G             &kp M         &kp N         &kp E         &kp I         &kp O
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR             &bt BT_CLR         &bt BT_CLR         &bt BT_CLR         &bt BT_CLR     &bt BT_CLR
+                 &kp Z         &kp X         &kp C         &kp V         &kp D             &kp K         &kp H         &kp Q         &kp COMMA     &kp DOT
             // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                           &bt BT_CLR    &bt BT_CLR         &bt BT_CLR     &bt BT_CLR
+                                                           &kp LSHIFT    &kp SPACE         &kp SPACE     &kp LSHIFT
             //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
           >;
         };
