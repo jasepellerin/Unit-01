@@ -118,6 +118,5 @@ dist
 # Project specific
 output
 temp*
-config.yaml
 
 polished-backups
