@@ -4,3 +4,4 @@ board:
   - nice_nano
 shield:
   - unit01_left
+  - unit01_right
