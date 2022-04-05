@@ -8,13 +8,13 @@
         base_layer {
           bindings = <
             //               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
-                               &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y
+                               &bootloader         &bootloader         &bootloader         &bootloader             &bootloader         &bootloader         &bootloader         &bootloader
             // ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮
-                 &kp A         &kp R         &kp S         &kp T         &kp G             &kp M         &kp N         &kp E         &kp I         &kp O
+                 &bootloader         &bootloader         &bootloader         &bootloader         &bootloader             &bootloader         &bootloader         &bootloader         &bootloader         &bootloader
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 &kp Z         &kp X         &kp C         &kp V         &kp D             &kp K         &kp H         &kp Q         &kp COMMA     &kp DOT
+                 &bootloader         &bootloader         &bootloader         &bootloader         &bootloader             &bootloader         &bootloader         &bootloader         &bootloader     &bootloader
             // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                           &kp LSHIFT    &kp SPACE         &kp SPACE     &kp LSHIFT
+                                                           &bootloader    &bootloader         &bootloader     &bootloader
             //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
           >;
         };
