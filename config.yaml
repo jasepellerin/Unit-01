@@ -186,33 +186,45 @@ outlines.exports:
   _panel:
     - name: _outer
       fillet: 3
+  panel:
+    - _panel
+  _case:
+    - _panel
+  case-inner:
+    - _panel
+    - operation: subtract
+      name: _panel
+
   panelWithKeys:
     - _panel
-    - operation: stack
+    - operation: subtract
       type: keys
       side: left
       tags: [key_switch]
       size: [*key_width, *key_height]
-    - operation: stack
+    - operation: subtract
       type: keys
       side: left
       tags: [mcu]
       size: [mcuWidth, mcuHeight]
-    - operation: stack
+    - operation: subtract
       type: keys
       side: left
       tags: [switch]
-      size: [switchWidth, switchHeight]
-    - operation: stack
+      size: [switchWidth + 4, switchHeight + 3]
+    - operation: subtract
       type: keys
       side: left
       tags: [button]
-      size: [buttonWidth, buttonHeight]
+      size: [buttonWidth + 3, buttonHeight + 3]
 
 cases:
+  plate:
+    - name: panelWithKeys
+      extrude: 1.5
   case:
-    - name: _panel
-      extrude: 6
+    - name: _case
+      extrude: 4
 
 pcbs:
   main:
@@ -233,22 +245,3 @@ pcbs:
           to: pos
         params:
           reverse: true
-
-      # Not compatible with web GUI
-      button:
-        type: resetButton
-        anchor.ref: button
-        nets:
-          r1: RST
-          r2: GND
-        params:
-          variant: 2_pin_th
-      batteryPad:
-        type: batteryPad
-        nets:
-          neg: GND
-          pos: pos
-        anchor:
-          ref: mcu
-          shift: [-mcuWidth / 2, -0]
-          rotate: 0
