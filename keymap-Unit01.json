@@ -1496,7 +1496,7 @@
     },
     {
       "keyNumber": 17,
-      "type": "&kp ",
+      "type": "&none",
       "values": [null],
       "keys": [],
       "codeId": "0de74fdb-924c-4bc5-8ee3-8dd0d13d6b62",
