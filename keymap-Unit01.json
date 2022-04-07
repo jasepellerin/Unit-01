@@ -657,16 +657,16 @@
     {
       "keyNumber": 7,
       "type": "&kp ",
-      "values": ["BACKSPACE"],
+      "values": ["DOUBLE_QUOTES"],
       "keys": [],
-      "codeId": "feaeee56-7a95-4460-bf5e-5973830ed1f0",
+      "codeId": "af84c0eb-6375-4df4-a09e-632970eaa550",
       "layerId": "fd891fcd-3b60-4e33-8a86-d45eb4bd10f0",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 7,
-      "type": "&kp ",
+      "type": "&none",
       "values": ["BACKSPACE"],
       "keys": [],
       "codeId": "feaeee56-7a95-4460-bf5e-5973830ed1f0",
@@ -906,17 +906,17 @@
     },
     {
       "keyNumber": 13,
-      "type": "&none",
-      "values": [null],
+      "type": "&kp ",
+      "values": ["LEFT"],
       "keys": [],
-      "codeId": "17915681-8b61-4cce-a17f-0f089a710833",
+      "codeId": "4d675fa4-e7c2-4a56-b1ae-37bdb75de8f9",
       "layerId": "7eece8c2-1fb9-4de2-abbe-0e30c874cda7",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 13,
-      "type": "&kp ",
+      "type": "&trans",
       "values": ["LEFT"],
       "keys": [],
       "codeId": "4d675fa4-e7c2-4a56-b1ae-37bdb75de8f9",
@@ -946,17 +946,17 @@
     },
     {
       "keyNumber": 14,
-      "type": "&none",
-      "values": ["NUMBER_5"],
+      "type": "&kp ",
+      "values": ["DOWN"],
       "keys": [],
-      "codeId": "aa145df8-da21-4251-b63b-64051b9522dd",
+      "codeId": "9b5c4f2b-b54d-4f96-b53f-9e81c5e748ea",
       "layerId": "7eece8c2-1fb9-4de2-abbe-0e30c874cda7",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 14,
-      "type": "&kp ",
+      "type": "&trans",
       "values": ["DOWN"],
       "keys": [],
       "codeId": "9b5c4f2b-b54d-4f96-b53f-9e81c5e748ea",
@@ -986,17 +986,17 @@
     },
     {
       "keyNumber": 15,
-      "type": "&none",
-      "values": ["NUMBER_6"],
+      "type": "&kp ",
+      "values": ["UP"],
       "keys": [],
-      "codeId": "1b97124c-7b61-4442-aa78-88457ed5d40b",
+      "codeId": "a6b9e317-2a81-43b5-81b6-2e4b08cc1f98",
       "layerId": "7eece8c2-1fb9-4de2-abbe-0e30c874cda7",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 15,
-      "type": "&kp ",
+      "type": "&trans",
       "values": ["UP"],
       "keys": [],
       "codeId": "a6b9e317-2a81-43b5-81b6-2e4b08cc1f98",
@@ -1026,17 +1026,17 @@
     },
     {
       "keyNumber": 16,
-      "type": "&none",
-      "values": ["MINUS"],
+      "type": "&kp ",
+      "values": ["RIGHT"],
       "keys": [],
-      "codeId": "11ca7037-82bd-4197-8692-5e7fbe5c5870",
+      "codeId": "0de74fdb-924c-4bc5-8ee3-8dd0d13d6b62",
       "layerId": "7eece8c2-1fb9-4de2-abbe-0e30c874cda7",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 16,
-      "type": "&kp ",
+      "type": "&trans",
       "values": ["RIGHT"],
       "keys": [],
       "codeId": "0de74fdb-924c-4bc5-8ee3-8dd0d13d6b62",
@@ -1056,33 +1056,33 @@
     },
     {
       "keyNumber": 17,
-      "type": "&kp ",
+      "type": "&to ",
       "values": ["RETURN"],
       "keys": [],
       "codeId": "a4c8dad5-35fd-4a36-97fc-4ccaa537c7ba",
       "layerId": "fd891fcd-3b60-4e33-8a86-d45eb4bd10f0",
-      "targetLayerId": "",
-      "targetLayerName": ""
+      "targetLayerId": "97e8f886-1ef5-4d90-8fa7-178e79c7e2a8",
+      "targetLayerName": "Functions"
     },
     {
       "keyNumber": 17,
-      "type": "&kp ",
+      "type": "&to ",
       "values": ["RETURN"],
       "keys": [],
       "codeId": "a4c8dad5-35fd-4a36-97fc-4ccaa537c7ba",
       "layerId": "7eece8c2-1fb9-4de2-abbe-0e30c874cda7",
-      "targetLayerId": "",
-      "targetLayerName": ""
+      "targetLayerId": "fd891fcd-3b60-4e33-8a86-d45eb4bd10f0",
+      "targetLayerName": "Symbols"
     },
     {
       "keyNumber": 17,
-      "type": "&kp ",
+      "type": "&to ",
       "values": ["RETURN"],
       "keys": [],
       "codeId": "a4c8dad5-35fd-4a36-97fc-4ccaa537c7ba",
       "layerId": "97e8f886-1ef5-4d90-8fa7-178e79c7e2a8",
-      "targetLayerId": "",
-      "targetLayerName": ""
+      "targetLayerId": "7eece8c2-1fb9-4de2-abbe-0e30c874cda7",
+      "targetLayerName": "Numbers"
     },
     {
       "keyNumber": 18,
@@ -1316,10 +1316,10 @@
     },
     {
       "keyNumber": 23,
-      "type": "&none",
-      "values": [],
+      "type": "&bt ",
+      "values": ["BT_SEL 1"],
       "keys": [],
-      "codeId": "",
+      "codeId": "670b10fc-5157-4f3a-9c15-f6d6ffe6d974",
       "layerId": "97e8f886-1ef5-4d90-8fa7-178e79c7e2a8",
       "targetLayerId": "",
       "targetLayerName": ""
@@ -1356,10 +1356,10 @@
     },
     {
       "keyNumber": 24,
-      "type": "&none",
-      "values": [],
+      "type": "&bt ",
+      "values": ["BT_SEL 2"],
       "keys": [],
-      "codeId": "",
+      "codeId": "e3ab6b1e-1d4e-421b-aba9-aaf859cd47c6",
       "layerId": "97e8f886-1ef5-4d90-8fa7-178e79c7e2a8",
       "targetLayerId": "",
       "targetLayerName": ""
@@ -1396,10 +1396,10 @@
     },
     {
       "keyNumber": 25,
-      "type": "&none",
-      "values": [],
+      "type": "&bt ",
+      "values": ["BT_SEL 3"],
       "keys": [],
-      "codeId": "",
+      "codeId": "bb7381a7-f57d-483b-8ba8-20bd74b64fb0",
       "layerId": "97e8f886-1ef5-4d90-8fa7-178e79c7e2a8",
       "targetLayerId": "",
       "targetLayerName": ""
@@ -1407,16 +1407,16 @@
     {
       "keyNumber": 26,
       "type": "&kp ",
-      "values": ["DOT"],
+      "values": ["RETURN"],
       "keys": [],
-      "codeId": "9cb5ca18-f5e3-4f27-9c88-7d9bf9bbeb2f",
+      "codeId": "a4c8dad5-35fd-4a36-97fc-4ccaa537c7ba",
       "layerId": "edb47c6e-50c1-4121-acd7-a9afc4f95de3",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 26,
-      "type": "&kp ",
+      "type": "&trans",
       "values": ["DOUBLE_QUOTES"],
       "keys": [],
       "codeId": "af84c0eb-6375-4df4-a09e-632970eaa550",
@@ -1426,7 +1426,7 @@
     },
     {
       "keyNumber": 26,
-      "type": "&none",
+      "type": "&trans",
       "values": ["NUMBER_0"],
       "keys": [],
       "codeId": "faf37fbe-6e6e-499c-83de-f5d50c603ed7",
@@ -1436,7 +1436,7 @@
     },
     {
       "keyNumber": 26,
-      "type": "&bt ",
+      "type": "&trans",
       "values": ["BT_PRV"],
       "keys": [],
       "codeId": "77625739-aa1c-4aa4-b96f-74610c0668a3",
@@ -1447,16 +1447,16 @@
     {
       "keyNumber": 27,
       "type": "&kp ",
-      "values": ["COMMA"],
+      "values": ["BACKSPACE"],
       "keys": [],
-      "codeId": "64b5e5a6-cce7-49b2-8650-0acb23bb2948",
+      "codeId": "feaeee56-7a95-4460-bf5e-5973830ed1f0",
       "layerId": "edb47c6e-50c1-4121-acd7-a9afc4f95de3",
       "targetLayerId": "",
       "targetLayerName": ""
     },
     {
       "keyNumber": 27,
-      "type": "&to ",
+      "type": "&trans",
       "values": ["SEMICOLON", "LGUI"],
       "keys": [],
       "codeId": "e8e0ee32-ae8b-49c6-be96-afa20e866d59",
@@ -1466,7 +1466,7 @@
     },
     {
       "keyNumber": 27,
-      "type": "&to ",
+      "type": "&trans",
       "values": [],
       "keys": [],
       "codeId": "",
@@ -1476,7 +1476,7 @@
     },
     {
       "keyNumber": 27,
-      "type": "&bt ",
+      "type": "&trans",
       "values": ["BT_NXT"],
       "keys": [],
       "codeId": "93f7c173-9e5d-4bfc-9888-b00330a01aed",
@@ -1536,10 +1536,10 @@
     },
     {
       "keyNumber": 29,
-      "type": "&trans",
-      "values": ["LEFT_SHIFT"],
+      "type": "&kp ",
+      "values": ["LEFT_GUI"],
       "keys": [],
-      "codeId": "d8bbb848-974a-4089-99c2-f98c663e983a",
+      "codeId": "7bdbaa7e-80b7-4276-9962-ca03869b4546",
       "layerId": "fd891fcd-3b60-4e33-8a86-d45eb4bd10f0",
       "targetLayerId": "",
       "targetLayerName": ""
