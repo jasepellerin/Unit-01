@@ -2,6 +2,8 @@
 
 ## TODO
 
+- Formatter should fail if it can't fit everything (show which line is too long)
+- Formatter should maintain the spacing between halves if possible
 - Make releases show the generated firmware
 - Combine repos
 
