@@ -79,7 +79,7 @@
       bindings = <
                               &kp ESC               &kp C_PREV            &kp C_NEXT            &kp C_PP                                                              &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
         &kp TAB               &none                 &kp LC(LS(TAB))       &kp RC(TAB)           &none                                                                 &trans                &trans                &trans                &trans                &to NUMBERS           
-        &none                 &none                 &none                 &none                 &none                                                                 &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &trans                &trans                
+        &none                 &bt BT_CLR            &BT BT_NXT            &BT BT_PRV            &none                                                                 &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                &to NUMBERS           
       >;
     };
