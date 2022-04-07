@@ -20,7 +20,7 @@
       bindings = <
                               &kp W                 &kp F                 &kp P                 &kp B                                                                 &kp J                 &kp L                 &kp U                 &kp Y                 
         &kp A                 &kp R                 &kp S                 &kp T                 &kp G                                                                 &kp M                 &kp N                 &kp E                 &kp I                 &kp O                 
-        &kp Z                 &kp X                 &kp C                 &kp V                 &kp D                                                                 &kp K                 &kp H                 &kp Q                 &kp RET               &kp BSPC              
+        &kp Z                 &kp X                 &kp C                 &kp V                 &kp D                                                                 &kp K                 &kp H                 &kp Q                 &kp BSPC              &kp RET                      
                                                                                                 &kp SPACE             &sk LSHIFT                &sk LCTRL             &to SYMBOLS           
       >;
     };
