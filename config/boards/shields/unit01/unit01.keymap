@@ -29,9 +29,9 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-    td: tapdance {
+    td0: tap_dance_0 {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAPDANCE";
+      label = "TAP_DANCE_0";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       bindings = <&kp>, <&kp>;
@@ -53,7 +53,7 @@
     Symbols_layer {
       bindings = <
                               &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &kp DQT               
-        &kp EXCL              &kp PIPE              &kp SLASH             &kp LT                &kp GT                                                                &td LBRC RBRC         &td LBKT RBKT         &kp LPAR              &kp RPAR              &to FUNCTIONS         
+        &kp EXCL              &kp PIPE              &kp SLASH             &kp LT                &kp GT                                                                &td0 LBRC RBRC        &td0 LBKT RBKT        &kp LPAR              &kp RPAR              &to FUNCTIONS         
         &kp GRAVE             &kp TILDE             &kp QMARK             &kp SEMI              &kp COLON                                                             &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
                                                                                                 &to BASE              &kp LMETA                 &sk LALT              &to NUMBERS           
       >;
