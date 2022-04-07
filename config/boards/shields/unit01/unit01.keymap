@@ -8,8 +8,8 @@
 #define FUNCTIONS 3
 
  &sk {
-     release-after-ms = <2000>;
-    quick-release;
+  release-after-ms = <2000>;
+  quick-release;
  };
 
 / {
