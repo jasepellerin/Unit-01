@@ -5,6 +5,16 @@
 - Make releases show the generated firmware
 - Combine repos
 
+## How to run the formatter
+
+1. Add line breaks between your rows to define the basic shape of your board
+1. Steal the `format.ts` file and put it wherever you like
+1. Install a typescript runner like [esrun](https://www.npmjs.com/package/@digitak/esrun) with `npm i -g @digitak/esrun`
+1. Add your `filePath` and `desiredKeyCharacters` variables in `format.ts`
+1. Run with esrun format.ts
+1. Tweak the output to match your formatting needs
+1. Run again after you change stuff :D
+
 ## Creation Process
 
 ### Shield creation / basic setup

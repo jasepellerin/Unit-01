@@ -1,18 +1,18 @@
 #!/usr/bin/env ts-node-script
 
-const fs = require("fs");
-
-const fileName = "./config/boards/shields/unit01/unit01.keymap";
-const desiredSpacing = 17;
+import fs from "fs";
 
 const bindingStartKey = "bindings = <";
 const bindingEndKey = ">;";
 
-try {
-  // One `&` sign is in each match, so account for that
-  const checkSpacing = desiredSpacing + 1;
+/**
+ * Change these values to match your needs
+ */
+const filePath = "./config/boards/shields/unit01/unit01.keymap";
+const desiredKeyCharacters = 18;
 
-  const data = fs.readFileSync(fileName, "utf8") as string;
+try {
+  const data = fs.readFileSync(filePath, "utf8") as string;
 
   const bindingMatches = [
     ...data.matchAll(new RegExp(`${bindingStartKey}`, "g")),
@@ -36,12 +36,12 @@ try {
     return keys.map((keyMatch) => {
       const keyContent = keyMatch[0];
 
-      if (keyMatch.index && keyContent.length < checkSpacing) {
+      if (keyMatch.index && keyContent.length < desiredKeyCharacters) {
         const dataIndex = bindingKeyIndex + keyMatch.index;
 
         return {
           index: dataIndex,
-          spacesNeeded: checkSpacing - keyContent.length,
+          spacesNeeded: desiredKeyCharacters - keyContent.length,
         };
       } else {
         return {
@@ -59,7 +59,7 @@ try {
     keySpacesNeededArray.reverse().map(({ index, spacesNeeded }) => {
       if (spacesNeeded) {
         const spaces = " ".repeat(spacesNeeded);
-        const startIndex = index + checkSpacing - spacesNeeded - 1;
+        const startIndex = index + desiredKeyWidth - spacesNeeded - 1;
 
         console.log(`Adding ${spacesNeeded} spaces at ${startIndex}`);
 
@@ -71,7 +71,7 @@ try {
     });
   });
 
-  fs.writeFileSync(fileName, newData);
+  fs.writeFileSync(filePath, newData);
 
   console.log("All good!");
 } catch (err) {
