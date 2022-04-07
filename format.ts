@@ -2,7 +2,7 @@
 
 import fs from "fs";
 
-const bindingStartKey = "bindings = <";
+const bindingStartKey = "bindings = <\n";
 const bindingEndKey = ">;";
 
 /**

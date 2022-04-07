@@ -7,10 +7,15 @@
 #define NUMBERS 2
 #define FUNCTIONS 3
 
- &sk {
-  release-after-ms = <2000>;
-  quick-release;
- };
+  &mt {
+    tapping-term-ms = <201>;
+    flavor = "tap-preferred";
+  };
+
+  &sk {
+    release-after-ms = <2000>;
+    quick-release;
+  };
 
   hm: homerow_mods {
     compatible = "zmk,behavior-hold-tap";
@@ -19,7 +24,7 @@
     tapping-term-ms = <300>;
     quick_tap_ms = <0>;
     flavor = "tap-preferred";
-    bindings = <&kp>, <               &kp                   >;
+    bindings = <&kp>, <&kp>;
   };
 
 / {
