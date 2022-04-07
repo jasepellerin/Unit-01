@@ -7,6 +7,7 @@
 
 ## How to run the formatter
 
+1. Commit or save your current work in case things get wild
 1. Add line breaks between your rows to define the basic shape of your board
 1. Steal the `format.ts` file and put it wherever you like
 1. Install a typescript runner like [esrun](https://www.npmjs.com/package/@digitak/esrun) with `npm i -g @digitak/esrun`
