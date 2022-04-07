@@ -18,25 +18,25 @@
 
     Base_layer {
       bindings = <
-        &kp W &kp F &kp P &kp B &kp J &kp L &kp U &kp Y &kp A &kp R &kp S &kp T &kp G &kp M &kp N &kp E &kp I &kp O &kp Z &kp X &kp C &kp V &kp D &kp K &kp H &kp Q &kp RETURN &kp BACKSPACE &kp SPACE &sk LEFT_SHIFT &sk LEFT_CONTROL &to SYMBOLS 
+        &kp W &kp F &kp P &kp B &kp J &kp L &kp U &kp Y &kp A &kp R &kp S &kp T &kp G &kp M &kp N &kp E &kp I &kp O &kp Z &kp X &kp C &kp V &kp D &kp K &kp H &kp Q &kp DOT &kp COMMA &kp SPACE &sk LEFT_SHIFT &sk LEFT_CONTROL &to SYMBOLS 
       >;
     };
 
     Symbols_layer {
       bindings = <
-        &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp SEMICOLON &kp EXCLAMATION &kp PIPE &kp SLASH &kp LT &kp GT &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp COLON &kp GRAVE &kp TILDE &kp QUESTION &kp DOT &kp COMMA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &to FUNCTIONS &to BASE &sk LEFT_SHIFT &sk LEFT_ALT &to NUMBERS 
+        &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp BACKSPACE &kp EXCLAMATION &kp PIPE &kp SLASH &kp LT &kp GT &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp RETURN &kp GRAVE &kp TILDE &kp QUESTION &kp SEMICOLON &kp COLON &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &to FUNCTIONS &to BASE &trans &sk undefined &to NUMBERS 
       >;
     };
 
     Numbers_layer {
       bindings = <
-        &kp K_BACK &none &none &kp K_FORWARD &kp MINUS &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp DEL &kp HOME &kp END &kp PLUS &kp EQUAL &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp BACKSPACE &none &none &none &none &kp UNDERSCORE &kp NUMBER_0 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &to SYMBOLS &to BASE &none &none &to FUNCTIONS 
+        &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp PLUS &kp C_AC_BACK &kp C_AC_REFRESH &kp C_AC_FORWARD &kp BACKSPACE &kp UNDERSCORE &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &none &none &none &none &kp RETURN &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp EQUAL &none &none &none &none &to SYMBOLS &to BASE &trans &trans &to FUNCTIONS 
       >;
     };
 
     Functions_layer {
       bindings = <
-        &kp ESCAPE &kp C_PREVIOUS &kp C_NEXT &kp C_PLAY_PAUSE &none &none &none &none &kp TAB &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none &none &none &none &none &none &none &none &bt BT_PRV &bt BT_NXT &to BASE &none &none &to NUMBERS 
+        &kp ESCAPE &kp C_PREVIOUS &kp C_NEXT &kp undefined &kp C_AC_BACK &kp C_AC_REFRESH &kp C_AC_FORWARD &kp BACKSPACE &kp TAB &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RETURN &none &none &none &none &none &none &none &none &bt BT_PRV &bt BT_NXT &to BASE &trans &trans &to NUMBERS 
       >;
     };
 
