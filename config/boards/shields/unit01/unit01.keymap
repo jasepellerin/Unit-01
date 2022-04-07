@@ -7,6 +7,11 @@
 #define NUMBERS 2
 #define FUNCTIONS 3
 
+ &sk {
+     release-after-ms = <2000>;
+    quick-release;
+ };
+
 / {
   keymap {
     compatible = "zmk,keymap";
