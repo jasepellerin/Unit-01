@@ -9,7 +9,7 @@ const bindingEndKey = ">;";
  * Change these values to match your needs
  */
 const filePath = "./config/boards/shields/unit01/unit01.keymap";
-const desiredKeyCharacters = 18;
+const desiredKeyCharacters = 22;
 
 try {
   const data = fs.readFileSync(filePath, "utf8") as string;
@@ -31,7 +31,7 @@ try {
     const bindingContent = data.substring(bindingKeyIndex, bindingEndIndex);
 
     // Find all the individual key mappings
-    const keys = [...bindingContent.matchAll(/&[^&\n]+/g)];
+    const keys = [...bindingContent.matchAll(/(&[^&\n]+)/g)];
 
     return keys.map((keyMatch) => {
       const keyContent = keyMatch[0];
@@ -41,11 +41,13 @@ try {
 
         return {
           index: dataIndex,
+          keyContent,
           spacesNeeded: desiredKeyCharacters - keyContent.length,
         };
       } else {
         return {
           index: 0,
+          keyContent: "",
           spacesNeeded: 0,
         };
       }
@@ -56,19 +58,22 @@ try {
 
   // Start at the end of the file, and work backwards
   formatSpacesNeeded.reverse().map((keySpacesNeededArray) => {
-    keySpacesNeededArray.reverse().map(({ index, spacesNeeded }) => {
-      if (spacesNeeded) {
-        const spaces = " ".repeat(spacesNeeded);
-        const startIndex = index + desiredKeyWidth - spacesNeeded - 1;
+    keySpacesNeededArray
+      .reverse()
+      .map(({ index, keyContent, spacesNeeded }) => {
+        if (spacesNeeded && keyContent) {
+          const spaces = " ".repeat(spacesNeeded);
 
-        console.log(`Adding ${spacesNeeded} spaces at ${startIndex}`);
+          const spaceInsertIndex = index + keyContent.length;
 
-        newData =
-          newData.substring(0, startIndex) +
-          spaces +
-          newData.substring(startIndex);
-      }
-    });
+          console.log(`Adding ${spacesNeeded} spaces at ${spaceInsertIndex}`);
+
+          newData =
+            newData.substring(0, spaceInsertIndex) +
+            spaces +
+            newData.substring(spaceInsertIndex);
+        }
+      });
   });
 
   fs.writeFileSync(filePath, newData);
