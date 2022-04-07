@@ -345,7 +345,7 @@
       "x": 330,
       "y": 150,
       "angle": 0,
-      "active": true,
+      "active": false,
       "row": 3,
       "column": 6,
       "side": "right",
@@ -517,7 +517,7 @@
     {
       "keyNumber": 3,
       "type": "&kp ",
-      "values": [null],
+      "values": ["C_PLAY_PAUSE"],
       "keys": [],
       "codeId": "359d5cd9-42b7-4cab-94cd-df8a09a57ac5",
       "layerId": "97e8f886-1ef5-4d90-8fa7-178e79c7e2a8",
@@ -546,7 +546,7 @@
     },
     {
       "keyNumber": 4,
-      "type": "&kp ",
+      "type": "&none",
       "values": ["C_AC_BACK"],
       "keys": [],
       "codeId": "da8b52a4-9f96-4941-9d76-942db856e679",
@@ -586,7 +586,7 @@
     },
     {
       "keyNumber": 5,
-      "type": "&kp ",
+      "type": "&none",
       "values": ["C_AC_REFRESH"],
       "keys": [],
       "codeId": "66e3fd47-2290-4c74-b804-2ad89fb2ddeb",
@@ -626,7 +626,7 @@
     },
     {
       "keyNumber": 6,
-      "type": "&kp ",
+      "type": "&none",
       "values": ["C_AC_FORWARD"],
       "keys": [],
       "codeId": "cc6fbc15-9e50-4a0a-9bab-80ddd938521e",
