@@ -36,7 +36,7 @@
 
     Functions_layer {
       bindings = <
-        &kp ESCAPE &kp C_PREVIOUS &kp C_NEXT &kp undefined &kp C_AC_BACK &kp C_AC_REFRESH &kp C_AC_FORWARD &kp BACKSPACE &kp TAB &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RETURN &none &none &none &none &none &none &none &none &bt BT_PRV &bt BT_NXT &to BASE &trans &trans &to NUMBERS 
+        &kp ESCAPE &kp C_PREVIOUS &kp C_NEXT &none &kp C_AC_BACK &kp C_AC_REFRESH &kp C_AC_FORWARD &kp BACKSPACE &kp TAB &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RETURN &none &none &none &none &none &none &none &none &bt BT_PRV &bt BT_NXT &to BASE &trans &trans &to NUMBERS 
       >;
     };
 
