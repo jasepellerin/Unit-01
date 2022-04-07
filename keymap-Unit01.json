@@ -345,7 +345,7 @@
       "x": 330,
       "y": 150,
       "angle": 0,
-      "active": false,
+      "active": true,
       "row": 3,
       "column": 6,
       "side": "right",
@@ -1577,7 +1577,7 @@
     {
       "keyNumber": 30,
       "type": "&sk ",
-      "values": [null],
+      "values": ["LEFT_ALT"],
       "keys": [],
       "codeId": "5cd6b7b9-b596-4600-92a1-67054af8663a",
       "layerId": "fd891fcd-3b60-4e33-8a86-d45eb4bd10f0",

@@ -24,7 +24,7 @@
 
     Symbols_layer {
       bindings = <
-        &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp BACKSPACE &kp EXCLAMATION &kp PIPE &kp SLASH &kp LT &kp GT &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp RETURN &kp GRAVE &kp TILDE &kp QUESTION &kp SEMICOLON &kp COLON &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &to FUNCTIONS &to BASE &trans &sk undefined &to NUMBERS 
+        &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp BACKSPACE &kp EXCLAMATION &kp PIPE &kp SLASH &kp LT &kp GT &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp RETURN &kp GRAVE &kp TILDE &kp QUESTION &kp SEMICOLON &kp COLON &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &to FUNCTIONS &to BASE &trans &sk LEFT_ALT &to NUMBERS 
       >;
     };
 
@@ -36,7 +36,7 @@
 
     Functions_layer {
       bindings = <
-        &kp ESCAPE &kp C_PREVIOUS &kp C_NEXT &none &kp C_AC_BACK &kp C_AC_REFRESH &kp C_AC_FORWARD &kp BACKSPACE &kp TAB &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RETURN &none &none &none &none &none &none &none &none &bt BT_PRV &bt BT_NXT &to BASE &trans &trans &to NUMBERS 
+        &kp ESCAPE &kp C_PREVIOUS &kp C_NEXT &kp null &kp C_AC_BACK &kp C_AC_REFRESH &kp C_AC_FORWARD &kp BACKSPACE &kp TAB &none &none &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RETURN &none &none &none &none &none &none &none &none &bt BT_PRV &bt BT_NXT &to BASE &trans &trans &to NUMBERS 
       >;
     };
 
