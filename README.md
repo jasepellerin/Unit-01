@@ -1,6 +1,6 @@
 # Unit-01 Firmware & Keymap
 
-![Unit-01 PCB](/ergogen/kicad/pcbs/render.png)
+![Unit-01 PCB](/images/pcbRender.png)
 
 ## What is this?
 
@@ -44,11 +44,21 @@ Moved back into the raw keymap file for more precise control over the keys
 
 ## Project log
 
-I had been curious about split ergonomic keyboards for a few years when I saw a few of Ben Vallack's videos on small custom keyboards. [This one in particular](https://www.youtube.com/watch?v=UKfeJrRIcxw) sparked my interest in designing and building my own board. I did more research and then just dove in and tried to follow Ben's general guidance. I asked loads of questions on various Discord servers along the way, and sincerely appreciate all the help I received from the community.
+### Initial idea
 
-I began by measuring the natural paths of my fingers on a site called [Ergopad](https://pashutk.ru/ergopad/). I then started plugging that info into [the unofficial Ergogen frontend](https://ergogen.cache.works/) and spent probably 25 hours learning that syntax and laying things out.
+I had been curious about split ergonomic keyboards for a few years when I saw a few of Ben Vallack's videos on small custom keyboards. [This one in particular](https://www.youtube.com/watch?v=UKfeJrRIcxw) sparked my interest in designing and building my own board. I asked loads of questions on various Discord servers along the way, and sincerely appreciate all the help I received from the community.
+
+### Ideation
+
+I did some research to learn about different switch options and elements I might want on my board. I started looking other people's builds, like the [Architeuthis dux](https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux) and the [card](https://github.com/benvallack/ergogen/blob/master/config.yaml). This helped me decide on the basic shape of the board and how many keys it would have.
+
+### Ergogen PCB design
+
+I began by measuring the natural paths of my fingers on a site called [Ergopad](https://pashutk.ru/ergopad/). Then I plugged that info into [the unofficial Ergogen frontend](https://ergogen.cache.works/) and spent probably 25 hours learning the syntax and tweaking positions.
 
 Then I started tweaking the exported file in Kicad. While adding my traces, I kept learning new things which led me back into Ergogen for another iteration cycle. Overall, this process probably took 15 more hours.
+
+### Part ordering
 
 At this time, I had all the necessary files to start ordering parts. Here's the list of parts I ordered:
 
