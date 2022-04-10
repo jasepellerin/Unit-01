@@ -42,9 +42,11 @@ Moved back into the raw keymap file for more precise control over the keys
 1. Tweak the output to match your formatting needs
 1. Run again after you change stuff :D
 
+---
+
 ## Project log
 
-### Initial idea
+### Initial Idea
 
 I had been curious about split ergonomic keyboards for a few years when I saw a few of Ben Vallack's videos on small custom keyboards. [This one in particular](https://www.youtube.com/watch?v=UKfeJrRIcxw) sparked my interest in designing and building my own board. I asked loads of questions on various Discord servers along the way, and sincerely appreciate all the help I received from the community.
 
@@ -52,13 +54,13 @@ I had been curious about split ergonomic keyboards for a few years when I saw a 
 
 I did some research to learn about different switch options and elements I might want on my board. I started looking other people's builds, like the [Architeuthis dux](https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux) and the [card](https://github.com/benvallack/ergogen/blob/master/config.yaml). This helped me decide on the basic shape of the board and how many keys it would have.
 
-### Ergogen PCB design
+### PCB Design (Ergogen)
 
 I began by measuring the natural paths of my fingers on a site called [Ergopad](https://pashutk.ru/ergopad/). Then I plugged that info into [the unofficial Ergogen frontend](https://ergogen.cache.works/) and spent probably 25 hours learning the syntax and tweaking positions.
 
 Then I started tweaking the exported file in Kicad. While adding my traces, I kept learning new things which led me back into Ergogen for another iteration cycle. Overall, this process probably took 15 more hours.
 
-### Part ordering
+### Part Ordering
 
 At this time, I had all the necessary files to start ordering parts. Here's the list of parts I ordered:
 
@@ -112,10 +114,22 @@ At this time, I had all the necessary files to start ordering parts. Here's the 
 | S/H         |  $19.48 |
 | Grand Total | $154.29 |
 
-After I received all the parts, I spent ~4 hours soldering everything since this was the first time I've ever soldered. I then spent around 8 hours debugging and fixing mistakes before I finally had a working keyboard.
+### Assembly
+
+After I received all the parts, I spent ~4 hours soldering everything. This step took a while since this was the first time I've ever soldered anything. Overall, it was pretty straightforward and I could feel myself getting more comfortable as I went.
+
+I then spent around 8 hours debugging and fixing mistakes before I finally had a working keyboard.
+
+### Firmware (ZMK)
 
 The next step was setting up the firmware using [ZMK](https://zmk.dev/docs/), which probably took around 4 hours to learn and customize. I expect spend even more time on this stage getting all the keys laid out just how I want them.
 
+### Case Design (Fusion 360)
+
 Once everything was working to my liking, I decided to design a case for the keyboard. I spent probably 5 hours designing the case and another 1-2 hours messing with the 3D printer and fitting everything together.
 
-Overall, this build took me around 60 hours to complete. I started out not knowing anything about keyboard building or PCB design, I didn't even know how to solder! I'm extremely pleased with how the board has turned out and am excited to actually use it now that it's done :D
+### Conclusion
+
+Overall, this build took me around 60 hours to complete. I started out not knowing anything about keyboard building or PCB design, I didn't even know how to solder!
+
+I'm extremely pleased with how the board has turned out and am excited to actually use it now that it's done :D
