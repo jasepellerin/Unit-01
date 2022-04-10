@@ -1,6 +1,6 @@
 # Unit01 Firmware & Keymap
 
-![Unit 01 PCB](/ergogen/kicad/pcbs/render.png | width=200)
+![Unit 01 PCB](/ergogen/kicad/pcbs/render.png)
 
 ## TODO
 
