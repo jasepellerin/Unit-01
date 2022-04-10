@@ -1,10 +1,18 @@
 # Unit01 Firmware & Keymap
 
+![Unit 01 PCB](/ergogen/kicad/pcbs/render.png | width=200)
+
 ## TODO
 
 - Formatter should fail if it can't fit everything (show which line is too long)
 - Formatter should maintain the spacing between halves if possible
 - Make releases show the generated firmware
+
+## Repo info
+
+- Top level - ZMK config and related files
+- "ergogen" - files related to the tool used to design the PCB and basic case elements
+- "case" - case models and related files
 
 ## How to run the formatter
 
@@ -17,7 +25,7 @@
 1. Tweak the output to match your formatting needs
 1. Run again after you change stuff :D
 
-## Creation Process
+## ZMK Process
 
 ### Shield creation / basic setup
 
