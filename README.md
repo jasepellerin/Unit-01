@@ -2,12 +2,6 @@
 
 ![Unit 01 PCB](/ergogen/kicad/pcbs/render.png)
 
-## TODO
-
-- Formatter should fail if it can't fit everything (show which line is too long)
-- Formatter should maintain the spacing between halves if possible
-- Make releases show the generated firmware
-
 ## Repo info
 
 - Top level - ZMK config and related files
