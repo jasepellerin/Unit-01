@@ -64,6 +64,17 @@ Then I started tweaking the exported file in Kicad. While adding my traces, I ke
 
 At this time, I had all the necessary files to start ordering parts. Here's the list of parts I ordered:
 
+**Total part costs**
+
+| Item        |   Price |
+| :---------- | ------: |
+| Subtotal    | $134.81 |
+| S/H         |  $19.48 |
+| Grand Total | $154.29 |
+
+<details>
+  <summary>Detailed cost breakdown</summary>
+
 [Boardsource](https://boardsource.xyz/)
 
 | Item                           | Price |
@@ -106,13 +117,7 @@ At this time, I had all the necessary files to start ordering parts. Here's the 
 | S/H     |    ~1 |
 | Total   |    $3 |
 
-**Total part costs**
-
-| Item        |   Price |
-| :---------- | ------: |
-| Subtotal    | $134.81 |
-| S/H         |  $19.48 |
-| Grand Total | $154.29 |
+</details>
 
 ### Assembly
 
