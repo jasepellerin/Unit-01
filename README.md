@@ -64,41 +64,53 @@ At this time, I had all the necessary files to start ordering parts. Here's the 
 
 [Boardsource](https://boardsource.xyz/)
 
-- 40x Kailh Choc hotswap sockets - $6
-- S/H - $4
-- Order total - $10
+| Item                           | Price |
+| :----------------------------- | ----: |
+| 40x Kailh Choc hotswap sockets |    $6 |
+| S/H                            |    $4 |
+| Order total                    |   $10 |
 
 [MKULTRA](https://mkultra.click/)
 
-- 40x Kailh Choc Switches (Silver) - $28.60
-- White MBK Choc Keycaps (Alphas) - $15
-- S/H - $5.59
-- Order total - $49.19
+| Item                             |  Price |
+| :------------------------------- | -----: |
+| 40x Kailh Choc Switches (Silver) | $28.60 |
+| White MBK Choc Keycaps (Alphas)  |    $15 |
+| S/H                              |  $5.59 |
+| Order total                      | $49.19 |
 
 [Little Keyboards](https://www.littlekeyboards.com/)
 
-- 2x nice!nano v2.0 - $49.98
-- 2x Battery Combo for nice!nano Controller - $23.98
-- S/H - $4.83
-- Total - $78.79
+| Item                                      |  Price |
+| :---------------------------------------- | -----: |
+| 2x nice!nano v2.0                         | $49.98 |
+| 2x Battery Combo for nice!nano Controller | $23.98 |
+| S/H                                       |  $4.83 |
+| Total                                     | $78.79 |
 
 [JLCPCB](https://jlcpcb.com/)
 
-- 5x Unit-01 PCB - $9.25
-- S/H - $4.06
-- Total - $13.31
+| Item          |  Price |
+| :------------ | -----: |
+| 5x Custom PCB |  $9.25 |
+| S/H           |  $4.06 |
+| Total         | $13.31 |
 
 [LCSC](https://lcsc.com/) - Part of a larger order
 
-- Buttons - ~$2
-- S/H - ~1
-- Total - $3
+| Item    | Price |
+| :------ | ----: |
+| Buttons |   ~$2 |
+| S/H     |    ~1 |
+| Total   |    $3 |
 
-<ins>Total parts cost</ins>
+**Total part costs**
 
-- Subtotal - $134.81
-- S/H - $19.48
-- Grand Total - $154.29
+| Item        |   Price |
+| :---------- | ------: |
+| Subtotal    | $134.81 |
+| S/H         |  $19.48 |
+| Grand Total | $154.29 |
 
 After I received all the parts, I spent ~4 hours soldering everything since this was the first time I've ever soldered. I then spent around 8 hours debugging and fixing mistakes before I finally had a working keyboard.
 
