@@ -1,7 +1,7 @@
 if SHIELD_UNIT01_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Unit 01"
+    default "Unit-01"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
@@ -11,11 +11,11 @@ endif
 if SHIELD_UNIT01_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Unit 01 Aux"
+	default "Unit-01 Aux"
     
 endif
 
-if SHIELD_UNIT01_LEFT || SHIELD_UNIT01_RIGHT
+if SHIELD_UNIT-01_LEFT || SHIELD_UNIT-01_RIGHT
 
 config ZMK_SPLIT
     default y
