@@ -1,0 +1,247 @@
+units:
+  halfKeyW: 0.5 cx
+  halfKeyH: 0.5 cy
+  paddingX: 2
+  paddingY: 2
+  pinkyRotate: 5
+  ringRotate: -5
+  indexRotate: -2
+  innerRotate: -2
+  thumbRotate: -8
+  thumbFarRotate: -4
+
+  buttonWidth: 3
+  buttonHeight: 2.5
+
+  mcuHeight: 18
+  mcuWidth: 33
+
+  switchWidth: 6.7
+  switchHeight: 2.6
+
+  # Used for demo.dxf
+  visual_x: 1
+  visual_y: 1
+
+points.zones:
+  matrix:
+    key: &key_attributes
+      width: &key_width 18
+      height: &key_height 17
+      tags:
+        key_switch: true
+      footprints:
+        choc_hotswap:
+          type: choc
+          nets:
+            from: =key_net
+            to: GND
+          params:
+            keycaps: true
+            reverse: true
+            hotswap: true
+        choc:
+          type: choc
+          anchor:
+            rotate: 180
+          nets:
+            from: =key_net
+            to: GND
+          params:
+            reverse: true
+            keycaps: true
+    rows:
+      bottom:
+      home:
+      top:
+    columns:
+      pinky:
+        rotate: pinkyRotate
+        rows:
+          top.skip: true
+          home.key_net: P8
+          bottom.key_net: P9
+      ring:
+        rotate: ringRotate
+        stagger: 6.75
+        spread: 20.75
+        rows:
+          top.key_net: P5
+          home.key_net: P6
+          bottom.key_net: P7
+      middle:
+        stagger: 3
+        spread: 20
+        rows:
+          top.key_net: P2
+          home.key_net: P3
+          bottom.key_net: P4
+      index:
+        rotate: indexRotate
+        stagger: -4
+        spread: 20
+        rows:
+          top.key_net: P18
+          home.key_net: P19
+          bottom.key_net: P20
+      inner:
+        spread: 20.25
+        stagger: -1
+        rotate: innerRotate
+        rows:
+          top.key_net: P21
+          home.key_net: P1
+          bottom.key_net: P0
+  thumbfan:
+    key: *key_attributes
+    anchor:
+      ref: matrix_inner_bottom
+      shift: [-7, -19]
+    columns:
+      home:
+        rotate: thumbRotate
+        spread: 6.25
+        stagger: -2.25
+        key.key_net: P10
+      far:
+        rotate: thumbFarRotate
+        stagger: -1
+        spread: 20
+        key.key_net: P16
+    rows:
+      thumb:
+
+  mcu:
+    key:
+      name: mcu
+      height: mcuHeight
+      width: mcuWidth
+      key_net:
+      rotate: 270
+      tags:
+        mcu: true
+    anchor:
+      - ref: matrix_inner_home
+        shift: [cx + paddingX, -halfKeyH - 1.25paddingY]
+
+  button:
+    key:
+      name: button
+      height: buttonHeight
+      width: buttonWidth
+      key_net:
+      rotate: 90
+      tags:
+        button: true
+    anchor:
+      - ref: mcu
+        shift: [cy + paddingY, halfKeyW - .75paddingX]
+
+  switch:
+    key:
+      name: switch
+      height: switchHeight
+      width: switchWidth
+      key_net:
+      tags:
+        switch: true
+    anchor:
+      - ref: button
+        shift: [-buttonWidth - paddingX - .5 switchWidth, 0]
+
+outlines.exports:
+  _outer:
+    - type: polygon
+      points:
+        - ref: matrix_inner_home
+          shift: [halfKeyW + 2.75paddingX + mcuHeight, 3paddingY]
+        - ref: thumbfan_far_thumb
+          shift: [halfKeyW + 1paddingX, halfKeyH + .5paddingY]
+        - ref: thumbfan_far_thumb
+          shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
+        - ref: thumbfan_far_thumb
+          shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
+        - ref: thumbfan_home_thumb
+          shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
+        - ref: thumbfan_home_thumb
+          shift: [-halfKeyW - paddingX, halfKeyH + paddingY -  7]
+        - ref: matrix_pinky_bottom
+          shift: [halfKeyW + paddingX, -halfKeyH - paddingY]
+        - ref: matrix_pinky_bottom
+          shift: [-halfKeyW - paddingX, -halfKeyH - paddingY]
+        - ref: matrix_pinky_home
+          shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
+        - ref: matrix_pinky_home
+          shift: [halfKeyW + paddingX + .75, halfKeyH + paddingY]
+        - ref: matrix_ring_top
+          shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
+        - ref: matrix_middle_top
+          shift: [-halfKeyW - paddingX, halfKeyH + paddingY]
+        - ref: matrix_middle_top
+          shift: [halfKeyW + paddingX, halfKeyH + paddingY]
+        - ref: matrix_index_top
+          shift: [halfKeyW + paddingX, halfKeyH + paddingY]
+        - ref: matrix_inner_top
+          shift: [halfKeyW + 1.9paddingX, halfKeyH + 1.25paddingY]
+  _panel:
+    - name: _outer
+      fillet: 3
+  panel:
+    - _panel
+  _case:
+    - _panel
+  case-inner:
+    - _panel
+    - operation: subtract
+      name: _panel
+
+  panelWithKeys:
+    - _panel
+    - operation: subtract
+      type: keys
+      side: left
+      tags: [key_switch]
+      size: [*key_width, *key_height]
+    - operation: subtract
+      type: keys
+      side: left
+      tags: [mcu]
+      size: [mcuWidth, mcuHeight]
+    - operation: subtract
+      type: keys
+      side: left
+      tags: [switch]
+      size: [switchWidth + 4, switchHeight + 3]
+    - operation: subtract
+      type: keys
+      side: left
+      tags: [button]
+      size: [buttonWidth + 3, buttonHeight + 3]
+
+cases:
+  plate:
+    - name: panelWithKeys
+      extrude: 1.5
+  case:
+    - name: _case
+      extrude: 4
+
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: _panel
+    footprints:
+      promicro:
+        type: promicro
+        anchor.ref: mcu
+        params:
+          orientation: up
+      switch:
+        type: slider
+        anchor.ref: switch
+        nets:
+          from: RAW
+          to: pos
+        params:
+          reverse: true
