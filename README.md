@@ -62,7 +62,7 @@ Then I started tweaking the exported file in Kicad. While adding my traces, I ke
 
 ### Part Ordering
 
-At this time, I had all the necessary files to start ordering parts. Here's the list of parts I ordered:
+At this time, I had all the necessary files to start ordering parts. Here's the total cost of parts I ordered (a detailed breakdown is available by expanding the section below):
 
 **Total part costs**
 
