@@ -123,7 +123,7 @@
     Symbols_layer {
       bindings = <
                               &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &none                 
-        &kp EXCL              &kp PIPE              &kp SLASH             &td5                  &td4                                                                &t/d0                  &td1                  &td2                  &td3                  &to FUNCTIONS         
+        &kp EXCL              &kp PIPE              &kp SLASH             &td5                  &td4                                                                &td0                  &td1                  &td2                  &td3                  &to FUNCTIONS         
         &kp GRAVE             &kp TILDE             &kp QMARK             &none                 &none                                                             &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
                                                                                                 &to BASE              &kp LMETA                 &sk LALT              &to NUMBERS           
       >;
