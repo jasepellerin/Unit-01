@@ -43,6 +43,69 @@
       tapping-term-ms = <200>;
       bindings = <&kp LBKT>, <&kp RBKT>;
     };
+    td2: tap_dance_2 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_2";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp LPAR>, <&kp RPAR>;
+    };
+    td3: tap_dance_3 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_3";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp LT>, <&kp GT>;
+    };
+    td4: tap_dance_4 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_4";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp SQT>, <&kp DQT>;
+    };
+    td5: tap_dance_5 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_5";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp COLON>, <&kp SEMI>;
+    };
+    atab: a_tab {
+      compatible = "zmk,behavior-mod-morph";
+      label = "A_TAB";
+      #binding-cells = <0>;
+      bindings = <&kp A>, <&kp TAB>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+    };
+    left: left {
+      compatible = "zmk,behavior-mod-morph";
+      label = "LEFT_ARR";
+      #binding-cells = <0>;
+      bindings = <&hm LCTL R>, <&kp LEFT>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+    };
+    right: right {
+      compatible = "zmk,behavior-mod-morph";
+      label = "RIGHT_ARR";
+      #binding-cells = <0>;
+      bindings = <&hm LMETA T>, <&kp RIGHT>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+    };
+    up: up {
+      compatible = "zmk,behavior-mod-morph";
+      label = "UP_ARR";
+      #binding-cells = <0>;
+      bindings = <&kp F>, <&kp UP>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+    };
+    down: down {
+      compatible = "zmk,behavior-mod-morph";
+      label = "DOWN_ARR";
+      #binding-cells = <0>;
+      bindings = <&hm LALT S>, <&kp DOWN>;
+      mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+    };
   };
 
   keymap {
@@ -59,9 +122,9 @@
 
     Symbols_layer {
       bindings = <
-                              &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &kp DQT               
-        &kp EXCL              &kp PIPE              &kp SLASH             &kp LT                &kp GT                                                                &td0                  &td1                  &kp LPAR              &kp RPAR              &to FUNCTIONS         
-        &kp GRAVE             &kp TILDE             &kp QMARK             &kp SEMI              &kp COLON                                                             &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
+                              &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &none                 
+        &kp EXCL              &kp PIPE              &kp SLASH             &td5                  &td4                                                                &t/d0                  &td1                  &td2                  &td3                  &to FUNCTIONS         
+        &kp GRAVE             &kp TILDE             &kp QMARK             &none                 &none                                                             &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
                                                                                                 &to BASE              &kp LMETA                 &sk LALT              &to NUMBERS           
       >;
     };
