@@ -75,7 +75,7 @@
       compatible = "zmk,behavior-mod-morph";
       label = "A_TAB";
       #binding-cells = <0>;
-      bindings = <&kp A>, <&kp TAB>;
+      bindings = <&kp A>, <&kp LALT(TAB)>;
       mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
     };
     left: left {
