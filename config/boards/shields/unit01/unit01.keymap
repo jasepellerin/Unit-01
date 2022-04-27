@@ -18,6 +18,8 @@
     quick-release;
   };
 
+/ {
+  
   combos {
     compatible = "zmk,combos";
     combo_game {
@@ -26,8 +28,6 @@
       bindings = <&to GM>;
     };
   }
-
-/ {
 
   behaviors {
     td0: tap_dance_0 {
