@@ -1,6 +1,6 @@
 file_format: "1"
 id: unit01
-name: Unit 01
+name: Unit-01
 type: shield
 url: https://github.com/jasepellerin/zmk-config
 requires: [pro_micro]

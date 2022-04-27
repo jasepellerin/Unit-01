@@ -1,5 +1,5 @@
-config SHIELD_UNIT01_LEFT
+config SHIELD_UNIT-01_LEFT
 	def_bool $(shields_list_contains,unit01_left)
 
-config SHIELD_UNIT01_RIGHT
+config SHIELD_UNIT-01_RIGHT
 	def_bool $(shields_list_contains,unit01_right)
