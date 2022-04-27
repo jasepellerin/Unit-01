@@ -128,7 +128,7 @@
                               &none                 &kp UP                &none                 &none                                                                  &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
         &none                 &mt LCTL LEFT         &mt LALT DOWN         &mt LMETA RIGHT       &none                                                                  &kp LEFT              &mt RMETA DOWN        &mt RALT UP           &mt RCTL RIGHT        &none                 
         &none                 &none                 &kp LS(LG(TAB))       &kp LG(TAB)           &none                                                                  &kp LC(LS(TAB))       &kp RC(TAB)           &none                 &trans                &trans                
-                                                                                                &kp LCTL              &trans                    &trans                 &kp LALT                 
+                                                                                                &to BASE              &trans                    &trans                 &kp LALT                 
       >;
     };
 
