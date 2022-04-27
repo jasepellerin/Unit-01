@@ -24,7 +24,7 @@
     compatible = "zmk,combos";
     combo_movement {
       timeout-ms = <30>;
-      key-positions = <4 20>;
+      key-positions = <8 17>;
       bindings = <&to MOVEMENT>;
     };
     combo_reset_left {
@@ -34,8 +34,18 @@
     };
     combo_reset_right {
       timeout-ms = <30>;
-      key-positions = <16 17 18 19>;
+      key-positions = <4 5 6 7>;
       bindings = <&reset>;
+    };
+    combo_bootloader_left {
+      timeout-ms = <30>;
+      key-positions = <19 20 21 22>;
+      bindings = <&bootloader>;
+    };
+    combo_bootloader_right {
+      timeout-ms = <30>;
+      key-positions = <23 24 25 26>;
+      bindings = <&bootloader>;
     };
   };
 
