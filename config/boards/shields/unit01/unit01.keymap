@@ -27,7 +27,7 @@
       key-positions = <4 20>;
       bindings = <&to MOVEMENT>;
     };
-  }
+  };
 
   behaviors {
     td0: tap_dance_0 {
