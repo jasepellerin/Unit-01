@@ -137,7 +137,7 @@
       bindings = <
                               &none                 &kp UP                &none                 &none                                                                  &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &bt BT_CLR                 
         &none                 &mt LCTL LEFT         &mt LALT DOWN         &mt LMETA RIGHT       &none                                                                  &kp LEFT              &mt RMETA DOWN        &mt RALT UP           &mt RCTL RIGHT        &none                 
-        &none                 &none                 &kp LS(LG(TAB))       &kp LG(TAB)           &none                                                                  &kp LC(LS(TAB))       &kp RC(TAB)           &none                 &trans                &trans                
+        &none                 &none                 &kp LS(LG(TAB))       &kp LG(TAB)           &none                                                                  &none                 &kp LC(LS(TAB))       &kp RC(TAB)            &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                 &kp LALT                 
       >;
     };
