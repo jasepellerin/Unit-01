@@ -123,8 +123,8 @@
     Symbols_layer {
       bindings = <
                               &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &none                 
-        &kp EXCL              &kp PIPE              &kp SLASH             &td5                  &td4                                                                &td0                  &td1                  &td2                  &td3                  &to FUNCTIONS         
-        &kp GRAVE             &kp TILDE             &kp QMARK             &none                 &none                                                             &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
+        &kp EXCL              &kp PIPE              &kp SLASH             &td5                  &td4                                                                  &td0                  &td1                  &td2                  &td3                  &to FUNCTIONS         
+        &kp GRAVE             &kp TILDE             &kp QMARK             &none                 &none                                                                 &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
                                                                                                 &to BASE              &kp LMETA                 &sk LALT              &to NUMBERS           
       >;
     };
@@ -140,7 +140,7 @@
 
     Functions_layer {
       bindings = <
-                              &kp ESC               &kp C_PREV            &kp C_NEXT            &kp C_PP                                                              &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
+                              &kp ESC               &kp C_PREV            &kp C_NEXT            &kp C_PP                                                              &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &bt BT_CLR                 
         &kp TAB               &none                 &kp LC(LS(TAB))       &kp RC(TAB)           &none                                                                 &kp LEFT              &kp DOWN              &kp UP                &kp RIGHT             &to NUMBERS           
         &none                 &bt BT_CLR            &bt BT_NXT            &bt BT_PRV            &none                                                                 &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &trans                &trans                
                                                                                                 &to BASE              &kp LMETA                 &sk LALT              &to SYMBOLS           
