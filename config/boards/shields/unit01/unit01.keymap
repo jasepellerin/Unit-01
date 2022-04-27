@@ -22,10 +22,10 @@
   
   combos {
     compatible = "zmk,combos";
-    combo_game {
+    combo_movement {
       timeout-ms = <30>;
       key-positions = <4 20>;
-      bindings = <&to GM>;
+      bindings = <&to MOVEMENT>;
     };
   }
 
