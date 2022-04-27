@@ -6,7 +6,6 @@
 #define SYMBOLS 1
 #define NUMBERS 2
 #define FUNCTIONS 3
-#define MOVEMENT 4
 
   &mt {
     tapping-term-ms = <201>;
@@ -19,17 +18,17 @@
   };
 
 / {
-  
-  combos {
-    compatible = "zmk,combos";
-    combo_movement {
-      timeout-ms = <30>;
-      key-positions = <4 20>;
-      bindings = <&to MOVEMENT>;
-    };
-  };
 
   behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <300>;
+      quick_tap_ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
     td0: tap_dance_0 {
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_0";
@@ -44,34 +43,6 @@
       tapping-term-ms = <200>;
       bindings = <&kp LBKT>, <&kp RBKT>;
     };
-    td2: tap_dance_2 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_2";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp LPAR>, <&kp RPAR>;
-    };
-    td3: tap_dance_3 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_3";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp LT>, <&kp GT>;
-    };
-    td4: tap_dance_4 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_4";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp SQT>, <&kp DQT>;
-    };
-    td5: tap_dance_5 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_5";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp COLON>, <&kp SEMI>;
-    };
   };
 
   keymap {
@@ -80,18 +51,18 @@
     Base_layer {
       bindings = <
                               &kp W                 &kp F                 &kp P                 &kp B                                                                 &kp J                 &kp L                 &kp U                 &kp Y                 
-        &kp A                 &mt LCTL R            &mt LALT S            &mt LMETA T           &kp G                                                                 &kp M                 &mt RMETA N           &mt RALT E            &mt RCTL I            &kp O                 
+        &kp A                 &hm LCTL R            &hm LALT S            &hm LMETA T           &kp G                                                                 &kp M                 &hm RMETA N           &hm RALT E            &hm RCTL I            &kp O                 
         &kp Z                 &kp X                 &kp C                 &kp V                 &kp D                                                                 &kp K                 &kp H                 &kp Q                 &kp BSPC              &kp RET                      
-                                                                                                &mt LC(LS(LALT)) SPC  &kp LSHIFT                &kp LMETA             &to SYMBOLS           
+                                                                                                &mt LC(LS(LALT)) SPC  &sk LSHIFT                &sk LCTRL             &to SYMBOLS           
       >;
     };
 
     Symbols_layer {
       bindings = <
-                              &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &none                 
-        &kp EXCL              &kp PIPE              &kp SLASH             &td5                  &td4                                                                  &td0                  &td1                  &td2                  &td3                  &to FUNCTIONS         
-        &kp GRAVE             &kp TILDE             &kp QMARK             &none                 &none                                                                 &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
-                                                                                                &to BASE              &trans                    &trans                &to NUMBERS           
+                              &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &kp DQT               
+        &kp EXCL              &kp PIPE              &kp SLASH             &kp LT                &kp GT                                                                &td0                  &td1                  &kp LPAR              &kp RPAR              &to FUNCTIONS         
+        &kp GRAVE             &kp TILDE             &kp QMARK             &kp SEMI              &kp COLON                                                             &kp DOT               &kp COMMA             &kp SQT               &trans                &trans                
+                                                                                                &to BASE              &kp LMETA                 &sk LALT              &to NUMBERS           
       >;
     };
 
@@ -100,25 +71,16 @@
                               &kp N7                &kp N8                &kp N9                &kp PLUS                                                              &none                 &none                 &none                 &none                 
         &kp UNDER             &kp N4                &kp N5                &kp N6                &kp MINUS                                                             &kp LEFT              &kp DOWN              &kp UP                &kp RIGHT             &to SYMBOLS           
         &kp N0                &kp N1                &kp N2                &kp N3                &kp EQUAL                                                             &kp DOT               &kp COMMA             &kp BACKSLASH         &trans                &trans                
-                                                                                                &to BASE              &trans                    &trans                &to FUNCTIONS         
+                                                                                                &to BASE              &kp LMETA                 &sk LALT              &to FUNCTIONS         
       >;
     };
 
     Functions_layer {
       bindings = <
-                              &kp ESC               &kp C_PREV            &kp C_NEXT            &kp C_PP                                                              &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &bt BT_CLR                 
-        &kp TAB               &none                 &kp LC(LS(TAB))       &kp LC(TAB)           &none                                                                 &kp LEFT              &kp DOWN              &kp UP                &kp RIGHT             &to NUMBERS           
+                              &kp ESC               &kp C_PREV            &kp C_NEXT            &kp C_PP                                                              &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
+        &kp TAB               &none                 &kp LC(LS(TAB))       &kp RC(TAB)           &none                                                                 &kp LEFT              &kp DOWN              &kp UP                &kp RIGHT             &to NUMBERS           
         &none                 &bt BT_CLR            &bt BT_NXT            &bt BT_PRV            &none                                                                 &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &trans                &trans                
-                                                                                                &to BASE              &trans                    &trans                &to SYMBOLS           
-      >;
-    };
-    
-    Movement_layer {
-      bindings = <
-                              &none                 &kp UP                &none                 &none                                                                  &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
-        &none                 &mt LCTL LEFT         &mt LALT DOWN         &mt LMETA RIGHT       &none                                                                  &kp LEFT              &mt RMETA DOWN        &mt RALT UP           &mt RCTL RIGHT        &none                 
-        &none                 &none                 &kp LS(LG(TAB))       &kp LG(TAB)           &none                                                                  &kp LC(LS(TAB))       &kp RC(TAB)           &none                 &trans                &trans                
-                                                                                                &kp LCTL              &trans                    &trans                 &kp LALT                 
+                                                                                                &to BASE              &kp LMETA                 &sk LALT              &to SYMBOLS           
       >;
     };
 
