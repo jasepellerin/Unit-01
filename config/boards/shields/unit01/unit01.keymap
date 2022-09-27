@@ -130,7 +130,7 @@
                               &wcmdshifttab         &fcmdtab              &pctrlshifttab        &bctrltab                                                             &kp J                 &kp L                 &kp U                 &kp Y                 
         &lt MOVEMENT A        &mt LCTL R            &mt LALT S            &mt LMETA T           &kp G                                                                 &kp M                 &mt RMETA N           &mt RALT E            &mt RCTL I            &lt MOVEMENT O                 
         &kp Z                 &kp X                 &kp C                 &kp V                 &kp D                                                                 &kp K                 &kp H                 &kp Q                 &kp BSPC              &kp RET                      
-                                                                                                &mt LC(LS(LALT)) SPC  &kp LSHIFT                &kp LMETA             &mo SYMBOLS           
+                                                                                                &mt LC(LALT) SPC      &kp LSHIFT                &kp LMETA             &mo SYMBOLS           
       >;
     };
 
