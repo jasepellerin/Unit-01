@@ -50,6 +50,23 @@
   };
 
   behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+    mo_to: behavior_mo_to {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MO_TO";
+        #binding-cells = <2>;
+        flavor = "hold-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&mo>, <&to>;
+    };
     brc: tap_dance_0 {
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_0";
@@ -107,7 +124,7 @@
     Base_layer {
       bindings = <
                               &kp W                 &kp F                 &kp P                 &kp B                                                                 &kp J                 &kp L                 &kp U                 &kp Y                 
-        &lt MOVEMENT A        &gqt LCTL R           &gqt LALT S           &gqt LMETA T          &kp G                                                                 &kp M                 &gqt RMETA N          &gqt RALT E           &gqt RCTL I           &lt MOVEMENT O                 
+        &lt MOVEMENT A        &gqt LCTL R           &hm  LALT S           &hm  LMETA T          &kp G                                                                 &kp M                 &hm  RMETA N          &hm  RALT E           &hm  RCTL I           &lt MOVEMENT O                 
         &kp Z                 &kp X                 &kp C                 &kp V                 &kp D                                                                 &kp K                 &kp H                 &kp Q                 &kp BSPC              &kp RET                      
                                                                                                 &kp SPC               &kp LSHIFT                &kp LMETA             &mo_to SYMBOLS           
       >;
@@ -134,7 +151,7 @@
     Movement_layer {
       bindings = <
                               &kp HOME              &kp UP                &kp END               &kp PGUP                                                               &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
-        &kp TAB               &gqt LCTL LEFT        &gqt LALT DOWN        &gqt LMETA RIGHT      &kp PGDN                                                               &kp LEFT              &gqt RMETA DOWN       &gqt RALT UP          &gqt RCTL RIGHT       &kp TAB                 
+        &kp TAB               &hm  LCTL LEFT        &hm  LALT DOWN        &hm  LMETA RIGHT      &kp PGDN                                                               &kp LEFT              &hm  RMETA DOWN       &hm  RALT UP          &hm  RCTL RIGHT       &kp TAB                 
         &none                 &none                 &none                 &none                 &none                                                                  &none                 &none                 &none                 &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                 &kp LALT                 
       >;
