@@ -103,15 +103,7 @@
       label = "TAP_DANCE_4";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp SQT>, <&kp DQT>;
-    };
-    lt_qt: behavior_lt_qt {
-        compatible = "zmk,behavior-hold-tap";
-        label = "lt_qt";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&qt>;
+      bindings = <&lt MOVEMENT SQT>, <&kp DQT>;
     };
     colon: tap_dance_5 {
       compatible = "zmk,behavior-tap-dance";
@@ -144,7 +136,7 @@
     Symbols_layer {
       bindings = <
                               &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &kp EQUAL                 
-        &lt MOVEMENT EXCL     &kp QMARK             &kp DOT               &ltgt                 &kp TILDE                                                             &par                  &brc                  &bkt                  &colon                &lt_qt MOVEMENT         
+        &lt MOVEMENT EXCL     &kp QMARK             &kp DOT               &ltgt                 &kp TILDE                                                             &par                  &brc                  &bkt                  &colon                &qt         
         &kp UNDER             &kp MINUS             &kp PLUS              &kp MINUS             &kp GRAVE                                                             &slh                  &kp COMMA             &kp SQT               &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                &to NUMBERS           
       >;
