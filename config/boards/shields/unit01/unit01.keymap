@@ -18,7 +18,7 @@
     quick-release;
   };
 
- {
+ / {
   
   combos {
     compatible = "zmk,combos";
@@ -162,7 +162,7 @@
     Movement_layer {
       bindings = <
                               &kp HOME              &kp UP                &kp END               &kp PGUP                                                               &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
-        &kp TAB               &mt LCTL LEFT         &mt LALT DOWN         &mt LMETA RIGHT       &kp PGDN                                                               &kp LEFT              &mt RMETA DOWN        &mt RALT UP           &mt RCTL RIGHT        &kp TAB                 
+        &kp TAB               &gqt LCTL LEFT        &gqt LALT DOWN        &gqt LMETA RIGHT      &kp PGDN                                                               &kp LEFT              &gqt RMETA DOWN       &gqt RALT UP          &gqt RCTL RIGHT       &kp TAB                 
         &none                 &none                 &none                 &none                 &none                                                                  &none                 &none                 &none                 &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                 &kp LALT                 
       >;
