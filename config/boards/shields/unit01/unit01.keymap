@@ -108,7 +108,7 @@
     lt_qt: behavior_lt_qt {
         compatible = "zmk,behavior-hold-tap";
         label = "lt_qt";
-        #binding-cells = <1>;
+        #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
         bindings = <&mo>, <&qt>;
