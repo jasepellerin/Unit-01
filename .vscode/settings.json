@@ -1,3 +1,17 @@
 {
-  "cSpell.words": ["hotswap", "keycaps", "keywell", "thumbfan"]
+  "cSpell.words": [
+    "bootloader",
+    "BSPC",
+    "hotswap",
+    "keycaps",
+    "keywell",
+    "LALT",
+    "LCTL",
+    "LMETA",
+    "LSHIFT",
+    "PRCNT",
+    "QMARK",
+    "RMETA",
+    "thumbfan"
+  ]
 }
