@@ -50,26 +50,6 @@
   };
 
   behaviors {
-    // Quick hold tap
-    gqt: global-quick-tap {
-      compatible = "zmk,behavior-hold-tap";
-      label = "GLOBAL_QUICK_TAP";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <125>;
-      global-quick-tap;
-      bindings = <&kp>, <&kp>;
-    };
-    // Momentary / to layer hold tap
-    mo_to: behavior_mo_to {
-        compatible = "zmk,behavior-hold-tap";
-        label = "mo_to";
-        #binding-cells = <2>;
-        flavor = "hold-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&to>;
-    };
     brc: tap_dance_0 {
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_0";
