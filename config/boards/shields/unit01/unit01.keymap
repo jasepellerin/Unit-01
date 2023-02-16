@@ -134,7 +134,7 @@
       bindings = <
                               &kp AT                &kp HASH              &kp DOLLAR            &kp PRCNT                                                             &kp CARET             &kp AMPS              &kp STAR              &kp EQUAL                 
         &lt MOVEMENT EXCL     &kp QMARK             &kp DOT               &ltgt                 &kp GRAVE                                                             &par                  &brc                  &bkt                  &colon                &qt         
-        &kp UNDER             &kp MINUS             &kp PLUS              &kp PIPE              &kp TILDE                                                             &slh                  &kp COMMA             &kp SQT               &trans                &trans                
+        &kp UNDER             &kp MINUS             &kp PLUS              &kp PIPE              &kp TILDE                                                             &slh                  &kp COMMA             &kp DOT               &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                &to NUMBERS           
       >;
     };
