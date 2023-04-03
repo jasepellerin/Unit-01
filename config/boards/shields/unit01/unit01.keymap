@@ -123,9 +123,9 @@
 
     Base_layer {
       bindings = <
-                              &kp W                 &kp F                 &kp P                 &kp B                                                                 &kp J                 &kp L                 &kp U                 &kp Y                 
-        &lt MOVEMENT A        &hm LCTL R            &hm LALT S            &hm LMETA T           &kp G                                                                 &kp M                 &hm RMETA N           &hm RALT E            &hm RCTL I            &lt MOVEMENT O                 
-        &kp Z                 &kp X                 &kp C                 &kp V                 &kp D                                                                 &kp K                 &kp H                 &kp Q                 &kp BSPC              &kp RET                      
+                              &kp W                 &kp E                 &kp R                 &kp T                                                                 &kp Y                 &kp U                 &kp I                 &kp O                 
+        &lt MOVEMENT A        &hm LCTL S            &hm LALT D            &hm LMETA F           &kp G                                                                 &kp H                 &hm RMETA J           &hm RALT K            &hm RCTL L            &lt MOVEMENT P                 
+        &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                                                                 &kp N                 &kp M                 &kp Q                 &kp BSPC              &kp RET                      
                                                                                                 &kp SPC               &kp LSHIFT                &kp LMETA             &mo_to SYMBOLS NUMBERS           
       >;
     };
