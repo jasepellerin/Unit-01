@@ -124,9 +124,9 @@
     Base_layer {
       bindings = <
                               &kp W                 &kp E                 &kp R                 &kp T                                                                 &kp Y                 &kp U                 &kp I                 &kp O                 
-        &lt MOVEMENT A        &hm LCTL S            &hm LMETA D           &hm LALT F            &kp G                                                                 &kp H                 &hm RALT J            &hm RMETA K            &hm RCTL L            &lt MOVEMENT P                 
+        &lt MOVEMENT A        &hm LCTRL S           &hm LMETA D           &hm LALT F            &kp G                                                                 &kp H                 &hm RALT J            &hm RMETA K           &hm RCTRL L            &lt MOVEMENT P                 
         &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                                                                 &kp N                 &kp M                 &kp Q                 &kp BSPC              &kp RET                      
-                                                                                                &kp SPC               &kp LSHIFT                &kp LMETA             &mo_to SYMBOLS NUMBERS           
+                                                                                                &kp SPACE             &kp LSHIFT                &kp LMETA             &mo_to SYMBOLS NUMBERS           
       >;
     };
 
@@ -150,10 +150,10 @@
     
     Movement_layer {
       bindings = <
-                              &kp HOME              &kp UP                &kp END               &kp PGUP                                                               &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
-        &kp TAB               &hm LCTL LEFT         &hm LMETA DOWN        &hm LALT RIGHT        &kp PGDN                                                               &kp LEFT              &hm META DOWN         &hm RALT UP           &hm RCTL RIGHT        &kp TAB
-        &kp ESC               &none                 &none                 &none                 &none                                                                  &none                 &none                 &none                 &trans                &trans                
-                                                                                                &to BASE              &trans                    &trans                 &kp LALT                 
+                              &kp HOME              &kp UP                &kp END               &kp PG_UP                                                             &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
+        &kp TAB               &hm LCTRL LEFT        &hm LMETA DOWN        &hm LALT RIGHT        &kp PG_DN                                                             &kp LEFT              &hm META DOWN         &hm RALT UP           &hm RCTRL RIGHT        &kp TAB
+        &kp ESC               &none                 &none                 &none                 &none                                                                 &none                 &none                 &none                 &trans                &trans                
+                                                                                                &to BASE              &trans                    &trans                &kp LALT                 
       >;
     };
 
