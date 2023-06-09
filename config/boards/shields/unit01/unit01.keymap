@@ -152,7 +152,7 @@
       bindings = <
                               &kp HOME              &kp UP                &kp END               &kp PGUP                                                               &kp C_AC_BACK         &kp C_AC_REFRESH      &kp C_AC_FORWARD      &none                 
         &kp TAB               &hm LCTL LEFT         &hm LALT DOWN         &hm LMETA RIGHT       &kp PGDN                                                               &kp LEFT              &hm META DOWN         &hm RALT UP           &hm RCTL RIGHT        &kp TAB
-        &kp esc               &none                 &none                 &none                 &none                                                                  &none                 &none                 &none                 &trans                &trans                
+        &kp ESC               &none                 &none                 &none                 &none                                                                  &none                 &none                 &none                 &trans                &trans                
                                                                                                 &to BASE              &trans                    &trans                 &kp LALT                 
       >;
     };
