@@ -30,12 +30,12 @@
     combo_reset_left {
       timeout-ms = <30>;
       key-positions = <0 1 2 3>;
-      bindings = <&reset>;
+      bindings = <&sys_reset>;
     };
     combo_reset_right {
       timeout-ms = <30>;
       key-positions = <4 5 6 7>;
-      bindings = <&reset>;
+      bindings = <&sys_reset>;
     };
     combo_bootloader_left {
       timeout-ms = <30>;
