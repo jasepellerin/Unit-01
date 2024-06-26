@@ -1,6 +1,10 @@
 # Unit-01 Firmware & Keymap
 
-![Unit-01 PCB](/images/casePair.jpg)
+![Unit-01 PCB](/images/render.jpg)
+
+![Unit-01 Caseless](/images/caseless.jpg)
+
+![Unit-01 Complete](/images/casePair.jpg)
 
 ## What is this?
 
